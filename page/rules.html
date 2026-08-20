@@ -1,0 +1,2520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="RspTrading Community Rules & Escrow Policy">
+
+    <title>RspTrading Community — Rules</title>
+
+
+    <style>
+
+        /* =====================================================
+           RSPTRADING COMMUNITY — RULES PAGE
+           Single File: HTML + CSS + JavaScript
+        ===================================================== */
+
+        :root {
+
+            --bg: #08080d;
+
+            --surface: #101018;
+
+            --surface-2: #14141d;
+
+            --surface-3: #0d0d14;
+
+            --text: #f5f5f7;
+
+            --muted: #9a9aa8;
+
+            --muted-2: #6f6f7d;
+
+            --line: rgba(255,255,255,.09);
+
+            --purple: #8b5cf6;
+
+            --purple-light: #b49bff;
+
+            --purple-dark: #6036c9;
+
+            --green: #55e6a5;
+
+            --orange: #ffb866;
+
+            --red: #ff7070;
+
+            --max-width: 980px;
+        }
+
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            font-family:
+                Inter,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Arial,
+                sans-serif;
+
+            background:
+                radial-gradient(
+                    circle at 50% -10%,
+                    rgba(139,92,246,.12),
+                    transparent 35%
+                ),
+                var(--bg);
+
+            color: var(--text);
+
+            line-height: 1.7;
+
+            min-height: 100vh;
+
+            overflow-x: hidden;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        .topbar {
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 100;
+
+            background:
+                rgba(8,8,13,.82);
+
+            backdrop-filter:
+                blur(18px);
+
+            -webkit-backdrop-filter:
+                blur(18px);
+
+            border-bottom:
+                1px solid var(--line);
+        }
+
+
+        .topbar-inner {
+
+            width:
+                min(
+                    var(--max-width),
+                    calc(100% - 32px)
+                );
+
+            min-height: 70px;
+
+            margin: auto;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 20px;
+        }
+
+
+        /* =====================================================
+           RSPTRADING LOGO
+           Put your logo as "logo.png" in the same folder.
+        ===================================================== */
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 18px;
+
+            font-weight: 800;
+
+            letter-spacing: -.5px;
+        }
+
+
+        .logo-image {
+
+            width: 36px;
+
+            height: 36px;
+
+            object-fit: contain;
+
+            border-radius: 9px;
+
+            display: block;
+        }
+
+
+        .logo-text span {
+
+            color:
+                var(--purple-light);
+        }
+
+
+        /* =====================================================
+           LANGUAGE
+        ===================================================== */
+
+        .language-box {
+            position: relative;
+        }
+
+
+        .language-select {
+
+            appearance: none;
+
+            -webkit-appearance: none;
+
+            background:
+                var(--surface-2);
+
+            color:
+                #ddd;
+
+            border:
+                1px solid var(--line);
+
+            border-radius: 10px;
+
+            padding:
+                9px 34px 9px 12px;
+
+            font-size: 12px;
+
+            outline: none;
+
+            cursor: pointer;
+
+            background-image:
+                linear-gradient(
+                    45deg,
+                    transparent 50%,
+                    #aaa 50%
+                ),
+                linear-gradient(
+                    135deg,
+                    #aaa 50%,
+                    transparent 50%
+                );
+
+            background-position:
+                calc(100% - 16px) 14px,
+                calc(100% - 12px) 14px;
+
+            background-size:
+                4px 4px,
+                4px 4px;
+
+            background-repeat: no-repeat;
+        }
+
+
+        .language-select:hover {
+
+            border-color:
+                rgba(139,92,246,.5);
+        }
+
+
+        /* =====================================================
+           PAGE
+        ===================================================== */
+
+        .page {
+
+            width:
+                min(
+                    var(--max-width),
+                    calc(100% - 32px)
+                );
+
+            margin:
+                auto;
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+
+            text-align: center;
+
+            padding:
+                78px 0 50px;
+        }
+
+
+        .eyebrow {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            color:
+                var(--purple-light);
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.7px;
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            margin-bottom: 17px;
+        }
+
+
+        .eyebrow-dot {
+
+            width: 7px;
+
+            height: 7px;
+
+            border-radius: 50%;
+
+            background:
+                var(--purple);
+
+            box-shadow:
+                0 0 14px
+                var(--purple);
+        }
+
+
+        .hero h1 {
+
+            font-size:
+                clamp(34px, 6vw, 58px);
+
+            line-height: 1.08;
+
+            letter-spacing: -2.8px;
+
+            margin-bottom: 18px;
+        }
+
+
+        .hero h1 span {
+
+            color:
+                var(--purple-light);
+        }
+
+
+        .hero-description {
+
+            max-width: 650px;
+
+            margin: auto;
+
+            color:
+                var(--muted);
+
+            font-size: 14px;
+        }
+
+
+        /* =====================================================
+           SOCIAL MEDIA BUTTONS
+           Placed directly under title
+        ===================================================== */
+
+        .social-buttons {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 7px;
+
+            margin:
+                20px auto 22px;
+
+            flex-wrap: wrap;
+        }
+
+
+        .social-button {
+
+            width: 34px;
+
+            height: 34px;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 9px;
+
+            background:
+                rgba(255,255,255,.045);
+
+            border:
+                1px solid
+                rgba(255,255,255,.09);
+
+            color:
+                #a7a7b5;
+
+            text-decoration: none;
+
+            transition:
+                all .2s ease;
+        }
+
+
+        .social-button svg {
+
+            width: 15px;
+
+            height: 15px;
+
+            fill: currentColor;
+
+            display: block;
+        }
+
+
+        .social-button:hover {
+
+            color: white;
+
+            background:
+                rgba(139,92,246,.16);
+
+            border-color:
+                rgba(139,92,246,.38);
+
+            transform:
+                translateY(-2px);
+        }
+
+
+        /* =====================================================
+           INTRO
+        ===================================================== */
+
+        .intro-card {
+
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(139,92,246,.12),
+                    rgba(255,255,255,.025)
+                );
+
+            border:
+                1px solid
+                rgba(139,92,246,.18);
+
+            border-radius: 18px;
+
+            padding: 28px;
+
+            margin-bottom: 18px;
+        }
+
+
+        .intro-card::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 180px;
+
+            height: 180px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(139,92,246,.12);
+
+            filter: blur(65px);
+
+            right: -80px;
+
+            top: -90px;
+
+            pointer-events: none;
+        }
+
+
+        .intro-card h2 {
+
+            position: relative;
+
+            font-size: 19px;
+
+            margin-bottom: 9px;
+        }
+
+
+        .intro-card p {
+
+            position: relative;
+
+            color:
+                var(--muted);
+
+            font-size: 13px;
+        }
+
+
+        /* =====================================================
+           SECTION TITLE
+        ===================================================== */
+
+        .section-title {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            margin:
+                44px 0 16px;
+        }
+
+
+        .section-number {
+
+            width: 34px;
+
+            height: 34px;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 10px;
+
+            background:
+                rgba(139,92,246,.12);
+
+            border:
+                1px solid
+                rgba(139,92,246,.18);
+
+            color:
+                var(--purple-light);
+
+            font-size: 11px;
+
+            font-weight: 800;
+        }
+
+
+        .section-title h2 {
+
+            font-size: 21px;
+
+            letter-spacing: -.5px;
+        }
+
+
+        /* =====================================================
+           COMMUNITY RULES
+        ===================================================== */
+
+        .rules-list {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 12px;
+        }
+
+
+        .rule-card {
+
+            display: flex;
+
+            gap: 14px;
+
+            background:
+                var(--surface);
+
+            border:
+                1px solid var(--line);
+
+            border-radius: 15px;
+
+            padding: 19px;
+
+            transition:
+                transform .2s,
+                border-color .2s;
+        }
+
+
+        .rule-card:hover {
+
+            transform:
+                translateY(-2px);
+
+            border-color:
+                rgba(139,92,246,.3);
+        }
+
+
+        .rule-icon {
+
+            width: 35px;
+
+            height: 35px;
+
+            min-width: 35px;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 9px;
+
+            background:
+                rgba(139,92,246,.1);
+
+            font-size: 16px;
+        }
+
+
+        .rule-card p {
+
+            color:
+                var(--muted);
+
+            font-size: 12px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           TRANSACTION
+        ===================================================== */
+
+        .transaction-box {
+
+            background:
+                var(--surface);
+
+            border:
+                1px solid var(--line);
+
+            border-radius: 18px;
+
+            overflow: hidden;
+        }
+
+
+        .transaction-header {
+
+            padding: 23px 25px;
+
+            border-bottom:
+                1px solid var(--line);
+
+            background:
+                rgba(255,255,255,.015);
+        }
+
+
+        .transaction-header h3 {
+
+            font-size: 17px;
+
+            margin-bottom: 7px;
+        }
+
+
+        .transaction-header p {
+
+            color:
+                var(--muted);
+
+            font-size: 12px;
+        }
+
+
+        .transaction-body {
+
+            padding: 25px;
+        }
+
+
+        .transaction-body > p {
+
+            color:
+                var(--muted);
+
+            font-size: 13px;
+
+            margin-bottom: 22px;
+        }
+
+
+        /* =====================================================
+           WARNING
+        ===================================================== */
+
+        .warning-box {
+
+            display: flex;
+
+            gap: 13px;
+
+            padding: 17px;
+
+            border-radius: 12px;
+
+            background:
+                rgba(255,184,102,.055);
+
+            border:
+                1px solid
+                rgba(255,184,102,.17);
+
+            color:
+                #aaa6a0;
+
+            font-size: 11px;
+
+            line-height: 1.7;
+        }
+
+
+        .warning-icon {
+
+            font-size: 17px;
+
+            min-width: 22px;
+        }
+
+
+        .warning-box strong {
+
+            color:
+                var(--orange);
+        }
+
+
+        /* =====================================================
+           ESCROW STEPS
+        ===================================================== */
+
+        .escrow-steps {
+
+            display: grid;
+
+            gap: 10px;
+        }
+
+
+        .escrow-step {
+
+            display: grid;
+
+            grid-template-columns:
+                48px 1fr;
+
+            gap: 16px;
+
+            align-items: start;
+
+            padding: 19px;
+
+            background:
+                var(--surface);
+
+            border:
+                1px solid var(--line);
+
+            border-radius: 14px;
+
+            transition:
+                border-color .2s,
+                transform .2s;
+        }
+
+
+        .escrow-step:hover {
+
+            transform:
+                translateX(3px);
+
+            border-color:
+                rgba(139,92,246,.28);
+        }
+
+
+        .step-number {
+
+            width: 42px;
+
+            height: 42px;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 11px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(139,92,246,.2),
+                    rgba(139,92,246,.06)
+                );
+
+            border:
+                1px solid
+                rgba(139,92,246,.18);
+
+            color:
+                var(--purple-light);
+
+            font-size: 14px;
+
+            font-weight: 800;
+        }
+
+
+        .escrow-step h3 {
+
+            font-size: 14px;
+
+            margin-bottom: 4px;
+        }
+
+
+        .escrow-step p {
+
+            color:
+                var(--muted);
+
+            font-size: 12px;
+        }
+
+
+        /* =====================================================
+           DISPUTE
+        ===================================================== */
+
+        .dispute-box {
+
+            margin-top: 18px;
+
+            padding: 22px;
+
+            border-radius: 16px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(255,112,112,.06),
+                    rgba(255,255,255,.015)
+                );
+
+            border:
+                1px solid
+                rgba(255,112,112,.14);
+        }
+
+
+        .dispute-title {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            color:
+                #ff9b9b;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            margin-bottom: 8px;
+        }
+
+
+        .dispute-box p {
+
+            color:
+                var(--muted);
+
+            font-size: 12px;
+        }
+
+
+        /* =====================================================
+           ADMIN
+        ===================================================== */
+
+        .admin-box {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 12px;
+
+            margin-top: 15px;
+        }
+
+
+        .admin-card {
+
+            padding: 20px;
+
+            background:
+                var(--surface);
+
+            border:
+                1px solid var(--line);
+
+            border-radius: 14px;
+        }
+
+
+        .admin-card .admin-icon {
+
+            font-size: 19px;
+
+            margin-bottom: 9px;
+        }
+
+
+        .admin-card p {
+
+            color:
+                var(--muted);
+
+            font-size: 12px;
+        }
+
+
+        /* =====================================================
+           FINAL MESSAGE
+        ===================================================== */
+
+        .final-card {
+
+            position: relative;
+
+            overflow: hidden;
+
+            margin:
+                55px 0 70px;
+
+            padding:
+                38px 30px;
+
+            text-align: center;
+
+            border-radius: 20px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #4d2aaf,
+                    #28184f
+                );
+
+            border:
+                1px solid
+                rgba(255,255,255,.1);
+
+            box-shadow:
+                0 25px 70px
+                rgba(0,0,0,.3);
+        }
+
+
+        .final-card::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 240px;
+
+            height: 240px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(255,255,255,.07);
+
+            filter: blur(60px);
+
+            top: -160px;
+
+            left: 50%;
+
+            transform:
+                translateX(-50%);
+        }
+
+
+        .final-card h2 {
+
+            position: relative;
+
+            font-size: 25px;
+
+            margin-bottom: 11px;
+        }
+
+
+        .final-card p {
+
+            position: relative;
+
+            max-width: 650px;
+
+            margin: auto;
+
+            color:
+                #d8d0ee;
+
+            font-size: 13px;
+        }
+
+
+        .signature {
+
+            position: relative;
+
+            margin-top: 23px;
+
+            font-weight: 800;
+
+            font-size: 14px;
+
+            color: white;
+        }
+
+
+        .tagline {
+
+            position: relative;
+
+            margin-top: 5px;
+
+            font-size: 10px;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
+            color:
+                #c6b8e8;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        .footer {
+
+            border-top:
+                1px solid var(--line);
+
+            padding:
+                25px 0 28px;
+
+            text-align: center;
+
+            color:
+                var(--muted-2);
+
+            font-size: 10px;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 700px) {
+
+            .hero {
+
+                padding:
+                    55px 0 38px;
+            }
+
+
+            .hero h1 {
+
+                letter-spacing:
+                    -1.8px;
+            }
+
+
+            .rules-list {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .admin-box {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .transaction-body {
+
+                padding: 19px;
+            }
+
+
+            .section-title {
+
+                margin-top: 35px;
+            }
+
+
+            .final-card {
+
+                padding:
+                    32px 20px;
+
+                margin-bottom:
+                    45px;
+            }
+
+        }
+
+
+        @media (max-width: 480px) {
+
+            .topbar-inner {
+
+                min-height: 64px;
+            }
+
+
+            .logo {
+
+                font-size: 16px;
+            }
+
+
+            .logo-image {
+
+                width: 31px;
+
+                height: 31px;
+            }
+
+
+            .language-select {
+
+                font-size: 11px;
+
+                padding:
+                    8px 29px 8px 9px;
+            }
+
+
+            .page {
+
+                width:
+                    calc(100% - 24px);
+            }
+
+
+            .hero-description {
+
+                font-size: 12px;
+            }
+
+
+            .intro-card {
+
+                padding: 21px;
+            }
+
+
+            .rule-card {
+
+                padding: 16px;
+            }
+
+
+            .escrow-step {
+
+                grid-template-columns:
+                    40px 1fr;
+
+                gap: 12px;
+
+                padding: 16px;
+            }
+
+
+            .step-number {
+
+                width: 36px;
+
+                height: 36px;
+
+                font-size: 12px;
+            }
+
+
+            .social-button {
+
+                width: 32px;
+
+                height: 32px;
+
+                border-radius: 8px;
+            }
+
+
+            .social-button svg {
+
+                width: 14px;
+
+                height: 14px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+    ===================================================== -->
+
+    <header class="topbar">
+
+        <div class="topbar-inner">
+
+
+            <!--
+                YOUR LOGO
+
+                Put your logo file in the same folder
+                and name it:
+
+                logo.png
+            -->
+
+            <a href="#top"
+               class="logo">
+
+                <img
+                    src="../assets/logo.jpg"
+                    alt="RspTrading Logo"
+                    class="logo-image"
+                    onerror="this.style.display='none';">
+
+
+                <span class="logo-text">
+
+                    Rsp<span>Trading</span>
+
+                </span>
+
+            </a>
+
+
+            <!-- LANGUAGE -->
+
+            <div class="language-box">
+
+                <select
+                    id="languageSelect"
+                    class="language-select">
+
+                    <option value="en">
+                        🇬🇧 English
+                    </option>
+
+                    <option value="bn">
+                        🇧🇩 বাংলা
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <main id="top">
+
+
+        <div class="page">
+
+
+            <!-- =================================================
+                 HERO
+            ================================================= -->
+
+            <section class="hero">
+
+
+                <div class="eyebrow">
+
+                    <span class="eyebrow-dot"></span>
+
+                    <span data-i18n="eyebrow">
+                        Community Guidelines
+                    </span>
+
+                </div>
+
+
+                <h1>
+
+                    <span data-i18n="heroTitle">
+                        RspTrading Community
+                    </span>
+
+                    <br>
+
+                    <span data-i18n="heroTitle2">
+                        Rules & Policies
+                    </span>
+
+                </h1>
+
+
+
+                <!-- =================================================
+                     SOCIAL MEDIA BUTTONS
+                     ================================================= -->
+
+
+                <div class="social-buttons">
+
+
+                    <!-- FACEBOOK -->
+
+                    <a
+                        href="https://www.facebook.com/RspTradingHQ"
+                        class="social-button"
+                        aria-label="Facebook"
+                        title="Facebook">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true">
+
+                            <path
+                                d="M14 8h3V4h-3c-3.314 0-5 1.686-5 5v3H6v4h3v8h4v-8h3l1-4h-4V9c0-.667.333-1 1-1z"/>
+
+                        </svg>
+
+                    </a>
+
+
+
+                    <!-- TWITTER / X -->
+
+                    <a
+                        href="https://twitter.com/RdpHelp"
+                        class="social-button"
+                        aria-label="Twitter / X"
+                        title="Twitter / X">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true">
+
+                            <path
+                                d="M18.244 2H21.5l-7.11 8.13L22.75 22h-6.62l-5.18-6.78L5.02 22H1.76l7.61-8.7L1.25 2h6.79l4.68 6.19L18.244 2Zm-1.16 17.93h1.8L6.94 3.95H5.01l12.074 15.98Z"/>
+
+                        </svg>
+
+                    </a>
+
+
+
+                    <!-- TELEGRAM -->
+
+                    <a
+                        href="https://t.me/RspTradingHQ"
+                        class="social-button"
+                        aria-label="Telegram"
+                        title="Telegram">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true">
+
+                            <path
+                                d="M21.9 3.2 18.6 20c-.25 1.19-.91 1.48-1.84.92l-5.06-3.73-2.44 2.35c-.27.27-.5.5-1.03.5l.37-5.17 9.41-8.5c.41-.37-.09-.58-.64-.21L5.74 13.1.75 11.54c-1.09-.34-1.11-1.09.23-1.59L20.48 2.6c.89-.33 1.67.21 1.42.6Z"/>
+
+                        </svg>
+
+                    </a>
+
+
+
+                    <!-- TELEGRAM GROUP -->
+
+                    <a
+                        href="https://t.me/+AvQmbJSfyk1iMWNl"
+                        class="social-button"
+                        aria-label="Telegram Group"
+                        title="Telegram Group">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true">
+
+                            <path
+                                d="M16 11c1.66 0 3-1.57 3-3.5S17.66 4 16 4s-3 1.57-3 3.5 1.34 3.5 3 3.5Zm-8 0c1.66 0 3-1.57 3-3.5S9.66 4 8 4 5 5.57 5 7.5 6.34 11 8 11Zm0 2c-2.33 0-7 1.17-7 3.5V20h14v-3.5C15 14.17 10.33 13 8 13Zm8 0c-.29 0-.62.02-.97.05 1.18.85 1.97 2.01 1.97 3.45V20h6v-3.5c0-2.33-4.67-3.5-7-3.5Z"/>
+
+                        </svg>
+
+                    </a>
+
+
+
+                    <!-- INSTAGRAM -->
+
+                    <a
+                        href="http://t.me/RspTradingHQ?direct"
+                        class="social-button"
+                        aria-label="Instagram"
+                        title="Instagram">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true">
+
+                            <path
+                                d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8Zm8.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/>
+
+                        </svg>
+
+                    </a>
+
+
+                </div>
+
+
+
+                <p class="hero-description"
+                   data-i18n="heroDescription">
+
+                    Please read these rules carefully before
+                    buying, selling or trading within the community.
+
+                </p>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 INTRO
+            ================================================= -->
+
+            <section class="intro-card">
+
+                <h2 data-i18n="welcomeTitle">
+
+                    📜 Welcome to RspTrading Community
+
+                </h2>
+
+
+                <p data-i18n="welcomeText">
+
+                    RspTrading Community is a community marketplace
+                    for Account Buy, Sell and Trade.
+
+                </p>
+
+
+                <p
+                    data-i18n="welcomeText2"
+                    style="margin-top:7px;">
+
+                    To keep the community safe, organized and
+                    trustworthy, all members are expected to follow
+                    the rules below.
+
+                </p>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 COMMUNITY RULES
+            ================================================= -->
+
+            <div class="section-title">
+
+                <div class="section-number">
+                    01
+                </div>
+
+                <h2 data-i18n="communityRulesTitle">
+                    Community Rules
+                </h2>
+
+            </div>
+
+
+            <section class="rules-list">
+
+
+                <article class="rule-card">
+
+                    <div class="rule-icon">
+                        🚫
+                    </div>
+
+                    <p data-i18n="rule1">
+                        No form of fraud, scam or intentionally
+                        providing false information is allowed.
+                    </p>
+
+                </article>
+
+
+                <article class="rule-card">
+
+                    <div class="rule-icon">
+                        ❌
+                    </div>
+
+                    <p data-i18n="rule2">
+                        Fake screenshots, fake proof or misleading
+                        information must not be posted.
+                    </p>
+
+                </article>
+
+
+                <article class="rule-card">
+
+                    <div class="rule-icon">
+                        🤝
+                    </div>
+
+                    <p data-i18n="rule3">
+                        Buyers, sellers and all other members
+                        must be treated with respect.
+                    </p>
+
+                </article>
+
+
+                <article class="rule-card">
+
+                    <div class="rule-icon">
+                        📢
+                    </div>
+
+                    <p data-i18n="rule4">
+                        Only posts related to Account Buy,
+                        Sell and Trade are allowed.
+                    </p>
+
+                </article>
+
+
+                <article class="rule-card">
+
+                    <div class="rule-icon">
+                        🚫
+                    </div>
+
+                    <p data-i18n="rule5">
+                        Spam, unnecessary promotion or unrelated
+                        links are not allowed.
+                    </p>
+
+                </article>
+
+
+                <article class="rule-card">
+
+                    <div class="rule-icon">
+                        🛡️
+                    </div>
+
+                    <p data-i18n="rule6">
+                        Never publicly share passwords, recovery
+                        codes, 2FA codes or other important
+                        private information.
+                    </p>
+
+                </article>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 TRANSACTION RULES
+            ================================================= -->
+
+            <div class="section-title">
+
+                <div class="section-number">
+                    02
+                </div>
+
+                <h2 data-i18n="transactionTitle">
+                    RspTrading Transaction & Escrow Rules
+                </h2>
+
+            </div>
+
+
+            <section class="transaction-box">
+
+
+                <div class="transaction-header">
+
+                    <h3 data-i18n="buyerSellerTitle">
+
+                        🛡️ Important Instructions for
+                        Buyers & Sellers
+
+                    </h3>
+
+
+                    <p data-i18n="buyerSellerSubtitle">
+
+                        Verify everything before completing a trade.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="transaction-body">
+
+
+                    <p data-i18n="buyerSellerText">
+
+                        Before buying, selling or trading any Account
+                        or Digital Product, Buyer and Seller should
+                        discuss the details carefully and verify the
+                        Account/Product information, condition,
+                        features and price.
+
+                    </p>
+
+
+                    <p data-i18n="buyerSellerText2">
+
+                        After both parties agree on the price and
+                        other conditions, it is recommended to
+                        complete the Transaction through the
+                        Official RspTrading Escrow Service.
+
+                    </p>
+
+
+
+                    <div class="warning-box">
+
+                        <div class="warning-icon">
+                            ⚠️
+                        </div>
+
+
+                        <div>
+
+                            <strong data-i18n="important">
+                                Important:
+                            </strong>
+
+
+                            <span data-i18n="offPlatformWarning">
+
+                                If any Buyer or Seller chooses to
+                                complete a Transaction directly
+                                through another method without using
+                                the RspTrading Escrow Service, and
+                                later suffers from fraud, payment
+                                problems or any other loss,
+                                RspTrading will not be responsible
+                                for that Transaction.
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ESCROW SERVICE
+            ================================================= -->
+
+            <div class="section-title">
+
+                <div class="section-number">
+                    03
+                </div>
+
+                <h2 data-i18n="escrowTitle">
+                    RspTrading Escrow Service Rules
+                </h2>
+
+            </div>
+
+
+
+            <section class="escrow-steps">
+
+
+                <article class="escrow-step">
+
+                    <div class="step-number">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3 data-i18n="step1Title">
+                            Seller → RspTrading
+                        </h3>
+
+                        <p data-i18n="step1Text">
+
+                            The Seller transfers the Account/Product
+                            to RspTrading for the escrow transaction.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="escrow-step">
+
+                    <div class="step-number">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3 data-i18n="step2Title">
+                            Buyer → RspTrading
+                        </h3>
+
+                        <p data-i18n="step2Text">
+
+                            The Buyer deposits the agreed full
+                            amount into RspTrading Escrow.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="escrow-step">
+
+                    <div class="step-number">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3 data-i18n="step3Title">
+                            Payment Confirmation
+                        </h3>
+
+                        <p data-i18n="step3Text">
+
+                            After RspTrading receives and verifies
+                            the payment, the next stage of the
+                            Transaction will be confirmed.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="escrow-step">
+
+                    <div class="step-number">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3 data-i18n="step4Title">
+                            RspTrading → Buyer
+                        </h3>
+
+                        <p data-i18n="step4Text">
+
+                            After payment confirmation, RspTrading
+                            transfers the Account/Product to the Buyer.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="escrow-step">
+
+                    <div class="step-number">
+                        05
+                    </div>
+
+                    <div>
+
+                        <h3 data-i18n="step5Title">
+                            Buyer Confirmation
+                        </h3>
+
+                        <p data-i18n="step5Text">
+
+                            The Buyer confirms that the Account/Product
+                            has been received correctly and that
+                            everything meets the agreed conditions.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="escrow-step">
+
+                    <div class="step-number">
+                        06
+                    </div>
+
+                    <div>
+
+                        <h3 data-i18n="step6Title">
+                            RspTrading → Seller
+                        </h3>
+
+                        <p data-i18n="step6Text">
+
+                            After receiving the Buyer's confirmation,
+                            RspTrading releases the payment to
+                            the Seller.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </section>
+
+
+
+            <div class="final-card"
+                 style="
+                    margin-top:18px;
+                    margin-bottom:0;
+                    padding:22px;
+                    background:
+                    rgba(85,230,165,.045);
+                    border-color:
+                    rgba(85,230,165,.15);
+                 ">
+
+                <p
+                    data-i18n="escrowComplete"
+                    style="
+                        color:#9eeac5;
+                        font-weight:600;
+                    ">
+
+                    ✅ This is how an RspTrading Escrow
+                    Transaction is completed.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 DISPUTE
+            ================================================= -->
+
+            <div class="section-title">
+
+                <div class="section-number">
+                    04
+                </div>
+
+                <h2 data-i18n="disputeSectionTitle">
+                    Dispute / Suspicious Activity
+                </h2>
+
+            </div>
+
+
+
+            <section class="dispute-box">
+
+
+                <div class="dispute-title">
+
+                    ⚠️
+
+                    <span data-i18n="disputeTitle">
+                        Dispute / Suspicious Activity
+                    </span>
+
+                </div>
+
+
+                <p data-i18n="disputeText">
+
+                    During an Escrow Transaction, if RspTrading
+                    notices any suspicious information, Account/Product
+                    issue, payment problem or unusual behavior from
+                    either Buyer or Seller, RspTrading reserves the
+                    right to suspend the Transaction and temporarily
+                    freeze the Escrow funds when necessary.
+
+                </p>
+
+
+                <p
+                    data-i18n="disputeText2"
+                    style="margin-top:10px;">
+
+                    In such cases, until the necessary verification
+                    is completed, the money or Account/Product may
+                    not be released to either party.
+
+                </p>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ADMIN
+            ================================================= -->
+
+            <div class="section-title">
+
+                <div class="section-number">
+                    05
+                </div>
+
+                <h2 data-i18n="adminTitle">
+                    Administration & Reporting
+                </h2>
+
+            </div>
+
+
+
+            <section class="admin-box">
+
+
+                <article class="admin-card">
+
+                    <div class="admin-icon">
+                        👮
+                    </div>
+
+                    <p data-i18n="adminRule">
+
+                        Admins may remove suspicious posts,
+                        Accounts or members whenever necessary
+                        to protect the community.
+
+                    </p>
+
+                </article>
+
+
+
+                <article class="admin-card">
+
+                    <div class="admin-icon">
+                        💬
+                    </div>
+
+                    <p data-i18n="reportRule">
+
+                        If you notice a problem, fraud allegation
+                        or suspicious activity, please report it
+                        to the Admin Team.
+
+                    </p>
+
+                </article>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 FINAL
+            ================================================= -->
+
+            <section class="final-card">
+
+
+                <h2 data-i18n="finalTitle">
+
+                    Stay Safe. Build Trust.
+
+                </h2>
+
+
+                <p data-i18n="finalText">
+
+                    You can use the RspTrading Escrow process to
+                    complete your purchases and sales in a safer
+                    and more organized way. Stay safe and help
+                    build a trusted trading community.
+
+                </p>
+
+
+                <div class="signature">
+
+                    — RspTrading
+
+                </div>
+
+
+                <div class="tagline">
+
+                    Buy • Sell • Trade • Trust
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+
+    <footer class="footer">
+
+        <div class="page">
+
+            <span data-i18n="copyright">
+                © 2026 RspTrading Community
+            </span>
+
+            <br>
+
+            <span data-i18n="footerText">
+                Buy • Sell • Trade • Trust
+            </span>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ===================================================== -->
+
+    <script>
+
+
+        const translations = {
+
+
+            /* =================================================
+               ENGLISH
+            ================================================= */
+
+            en: {
+
+                eyebrow:
+                "Community Guidelines",
+
+                heroTitle:
+                "RspTrading Community",
+
+                heroTitle2:
+                "Rules & Policies",
+
+                heroDescription:
+                "Please read these rules carefully before buying, selling or trading within the community.",
+
+                welcomeTitle:
+                "📜 Welcome to RspTrading Community",
+
+                welcomeText:
+                "RspTrading Community is a community marketplace for Account Buy, Sell and Trade.",
+
+                welcomeText2:
+                "To keep the community safe, organized and trustworthy, all members are expected to follow the rules below.",
+
+                communityRulesTitle:
+                "Community Rules",
+
+                rule1:
+                "No form of fraud, scam or intentionally providing false information is allowed.",
+
+                rule2:
+                "Fake screenshots, fake proof or misleading information must not be posted.",
+
+                rule3:
+                "Buyers, sellers and all other members must be treated with respect.",
+
+                rule4:
+                "Only posts related to Account Buy, Sell and Trade are allowed.",
+
+                rule5:
+                "Spam, unnecessary promotion or unrelated links are not allowed.",
+
+                rule6:
+                "Never publicly share passwords, recovery codes, 2FA codes or other important private information.",
+
+                transactionTitle:
+                "RspTrading Transaction & Escrow Rules",
+
+                buyerSellerTitle:
+                "🛡️ Important Instructions for Buyers & Sellers",
+
+                buyerSellerSubtitle:
+                "Verify everything before completing a trade.",
+
+                buyerSellerText:
+                "Before buying, selling or trading any Account or Digital Product, Buyer and Seller should discuss the details carefully and verify the Account/Product information, condition, features and price.",
+
+                buyerSellerText2:
+                "After both parties agree on the price and other conditions, it is recommended to complete the Transaction through the Official RspTrading Escrow Service.",
+
+                important:
+                "Important:",
+
+                offPlatformWarning:
+                "If any Buyer or Seller chooses to complete a Transaction directly through another method without using the RspTrading Escrow Service, and later suffers from fraud, payment problems or any other loss, RspTrading will not be responsible for that Transaction.",
+
+                escrowTitle:
+                "RspTrading Escrow Service Rules",
+
+                step1Title:
+                "Seller → RspTrading",
+
+                step1Text:
+                "The Seller transfers the Account/Product to RspTrading for the escrow transaction.",
+
+                step2Title:
+                "Buyer → RspTrading",
+
+                step2Text:
+                "The Buyer deposits the agreed full amount into RspTrading Escrow.",
+
+                step3Title:
+                "Payment Confirmation",
+
+                step3Text:
+                "After RspTrading receives and verifies the payment, the next stage of the Transaction will be confirmed.",
+
+                step4Title:
+                "RspTrading → Buyer",
+
+                step4Text:
+                "After payment confirmation, RspTrading transfers the Account/Product to the Buyer.",
+
+                step5Title:
+                "Buyer Confirmation",
+
+                step5Text:
+                "The Buyer confirms that the Account/Product has been received correctly and that everything meets the agreed conditions.",
+
+                step6Title:
+                "RspTrading → Seller",
+
+                step6Text:
+                "After receiving the Buyer's confirmation, RspTrading releases the payment to the Seller.",
+
+                escrowComplete:
+                "✅ This is how an RspTrading Escrow Transaction is completed.",
+
+                disputeSectionTitle:
+                "Dispute / Suspicious Activity",
+
+                disputeTitle:
+                "Dispute / Suspicious Activity",
+
+                disputeText:
+                "During an Escrow Transaction, if RspTrading notices any suspicious information, Account/Product issue, payment problem or unusual behavior from either Buyer or Seller, RspTrading reserves the right to suspend the Transaction and temporarily freeze the Escrow funds when necessary.",
+
+                disputeText2:
+                "In such cases, until the necessary verification is completed, the money or Account/Product may not be released to either party.",
+
+                adminTitle:
+                "Administration & Reporting",
+
+                adminRule:
+                "Admins may remove suspicious posts, Accounts or members whenever necessary to protect the community.",
+
+                reportRule:
+                "If you notice a problem, fraud allegation or suspicious activity, please report it to the Admin Team.",
+
+                finalTitle:
+                "Stay Safe. Build Trust.",
+
+                finalText:
+                "You can use the RspTrading Escrow process to complete your purchases and sales in a safer and more organized way. Stay safe and help build a trusted trading community.",
+
+                copyright:
+                "© 2026 RspTrading Community",
+
+                footerText:
+                "Buy • Sell • Trade • Trust"
+            },
+
+
+            /* =================================================
+               BANGLA
+            ================================================= */
+
+            bn: {
+
+                eyebrow:
+                "কমিউনিটি নির্দেশিকা",
+
+                heroTitle:
+                "RspTrading Community",
+
+                heroTitle2:
+                "নিয়ম ও নীতিমালা",
+
+                heroDescription:
+                "কমিউনিটির মধ্যে কেনাবেচা বা ট্রেড করার আগে অনুগ্রহ করে নিয়মগুলো ভালোভাবে পড়ে নিন।",
+
+                welcomeTitle:
+                "📜 RspTrading Community-তে স্বাগতম!",
+
+                welcomeText:
+                "এটি Account Buy, Sell ও Trade করার জন্য একটি কমিউনিটি মার্কেটপ্লেস।",
+
+                welcomeText2:
+                "কমিউনিটিকে নিরাপদ, সুন্দর ও বিশ্বাসযোগ্য রাখতে সবাইকে নিচের নিয়মগুলো মেনে চলতে হবে।",
+
+                communityRulesTitle:
+                "কমিউনিটির নিয়ম",
+
+                rule1:
+                "কোনো ধরনের প্রতারণা, Scam বা ইচ্ছাকৃতভাবে মিথ্যা তথ্য দেওয়া যাবে না।",
+
+                rule2:
+                "Fake Screenshot, Fake Proof বা বিভ্রান্তিকর তথ্য পোস্ট করা যাবে না।",
+
+                rule3:
+                "Buyer, Seller ও অন্যান্য সকল সদস্যকে সম্মান করতে হবে।",
+
+                rule4:
+                "শুধুমাত্র Account Buy, Sell ও Trade সম্পর্কিত পোস্ট করা যাবে।",
+
+                rule5:
+                "Spam, অপ্রয়োজনীয় Promotion বা সম্পর্কহীন Link দেওয়া যাবে না।",
+
+                rule6:
+                "Password, Recovery Code, 2FA Code বা গুরুত্বপূর্ণ ব্যক্তিগত তথ্য প্রকাশ্যে শেয়ার করবেন না।",
+
+                transactionTitle:
+                "RspTrading Transaction & Escrow Rules",
+
+                buyerSellerTitle:
+                "🛡️ Buyer & Seller-এর জন্য গুরুত্বপূর্ণ নির্দেশনা",
+
+                buyerSellerSubtitle:
+                "ট্রেড সম্পন্ন করার আগে সবকিছু ভালোভাবে যাচাই করুন।",
+
+                buyerSellerText:
+                "কোনো Account বা Digital Product কেনাবেচা/Trade করার আগে Buyer ও Seller একে অপরের সঙ্গে বিস্তারিত আলোচনা করে Account/Product-এর তথ্য, অবস্থা, বৈশিষ্ট্য ও মূল্য যাচাই করে নিন।",
+
+                buyerSellerText2:
+                "দাম ও অন্যান্য শর্তে উভয় পক্ষ সম্মত হওয়ার পর RspTrading-এর Official Escrow Service-এর মাধ্যমে Transaction সম্পন্ন করার পরামর্শ দেওয়া হচ্ছে।",
+
+                important:
+                "⚠️ গুরুত্বপূর্ণ:",
+
+                offPlatformWarning:
+                "কোনো Buyer বা Seller যদি RspTrading-এর Escrow Service ব্যবহার না করে নিজেদের মধ্যে অন্য কোনো মাধ্যমে সরাসরি Transaction সম্পন্ন করেন এবং পরবর্তীতে প্রতারণা, Payment সমস্যা বা অন্য কোনো ক্ষতির শিকার হন, তাহলে সেই Transaction-এর জন্য RspTrading কোনোভাবেই দায়ী থাকবে না।",
+
+                escrowTitle:
+                "🛡️ RspTrading Escrow Service-এর নিয়ম",
+
+                step1Title:
+                "Seller → RspTrading",
+
+                step1Text:
+                "বিক্রেতা তার Account/Product Escrow Transaction-এর জন্য RspTrading-এর কাছে হস্তান্তর করবেন।",
+
+                step2Title:
+                "Buyer → RspTrading",
+
+                step2Text:
+                "ক্রেতা সম্মত সম্পূর্ণ মূল্য RspTrading-এর Escrow-তে জমা করবেন।",
+
+                step3Title:
+                "Payment Confirmation",
+
+                step3Text:
+                "RspTrading পেমেন্ট গ্রহণ ও যাচাই করার পর Transaction-এর পরবর্তী ধাপ নিশ্চিত করবে।",
+
+                step4Title:
+                "RspTrading → Buyer",
+
+                step4Text:
+                "পেমেন্ট নিশ্চিত হওয়ার পর RspTrading Account/Product ক্রেতার কাছে হস্তান্তর করবে।",
+
+                step5Title:
+                "Buyer Confirmation",
+
+                step5Text:
+                "ক্রেতা Account/Product সঠিকভাবে বুঝে পেয়েছেন এবং নির্ধারিত শর্ত অনুযায়ী সবকিছু ঠিক আছে—এটি নিশ্চিত করবেন।",
+
+                step6Title:
+                "RspTrading → Seller",
+
+                step6Text:
+                "ক্রেতার Confirmation পাওয়ার পর RspTrading বিক্রেতাকে পেমেন্ট প্রদান করবে।",
+
+                escrowComplete:
+                "✅ এভাবেই RspTrading Escrow Transaction সম্পন্ন হবে।",
+
+                disputeSectionTitle:
+                "Dispute / Suspicious Activity",
+
+                disputeTitle:
+                "⚠️ Dispute / Suspicious Activity",
+
+                disputeText:
+                "Escrow Transaction চলাকালীন Buyer বা Seller-এর কোনো তথ্য, Account/Product, Payment অথবা আচরণ নিয়ে সন্দেহ বা অসঙ্গতি দেখা দিলে RspTrading প্রয়োজন অনুযায়ী Transaction স্থগিত করে Escrow-এর অর্থ সাময়িকভাবে ফ্রিজ করে রাখার অধিকার সংরক্ষণ করে।",
+
+                disputeText2:
+                "এক্ষেত্রে প্রয়োজনীয় যাচাই সম্পন্ন না হওয়া পর্যন্ত কোনো পক্ষের কাছেই অর্থ বা Account/Product হস্তান্তর না-ও করা হতে পারে।",
+
+                adminTitle:
+                "Administration & Reporting",
+
+                adminRule:
+                "সন্দেহজনক পোস্ট, Account বা সদস্যকে কমিউনিটির নিরাপত্তার জন্য Admin প্রয়োজনে Remove করতে পারবে।",
+
+                reportRule:
+                "কোনো সমস্যা, প্রতারণার অভিযোগ বা সন্দেহজনক কার্যক্রম দেখলে Admin Team-কে জানান।",
+
+                finalTitle:
+                "নিরাপদ থাকুন। Trust তৈরি করুন।",
+
+                finalText:
+                "আপনি RspTrading-এর Escrow প্রক্রিয়ার মাধ্যমে আরও নিরাপদ ও সংগঠিতভাবে ক্রয়/বিক্রয় সম্পন্ন করার সুযোগ পাবেন। নিরাপদ থাকুন এবং একটি বিশ্বাসযোগ্য ট্রেডিং কমিউনিটি তৈরি করতে সহযোগিতা করুন।",
+
+                copyright:
+                "© 2026 RspTrading Community",
+
+                footerText:
+                "Buy • Sell • Trade • Trust"
+            }
+
+        };
+
+
+        /* =====================================================
+           LANGUAGE FUNCTION
+        ===================================================== */
+
+        function changeLanguage(language) {
+
+            const elements =
+                document.querySelectorAll(
+                    "[data-i18n]"
+                );
+
+
+            elements.forEach(function(element) {
+
+                const key =
+                    element.getAttribute(
+                        "data-i18n"
+                    );
+
+
+                if (
+                    translations[language] &&
+                    translations[language][key]
+                ) {
+
+                    element.innerHTML =
+                        translations[language][key];
+
+                }
+
+            });
+
+
+            document.documentElement.lang =
+                language;
+
+
+            localStorage.setItem(
+                "rspTradingRulesLanguage",
+                language
+            );
+
+        }
+
+
+        /* =====================================================
+           LANGUAGE SELECTOR
+        ===================================================== */
+
+        const languageSelect =
+            document.getElementById(
+                "languageSelect"
+            );
+
+
+        languageSelect.addEventListener(
+            "change",
+            function() {
+
+                changeLanguage(
+                    this.value
+                );
+
+            }
+        );
+
+
+        /* =====================================================
+           LOAD SAVED LANGUAGE
+        ===================================================== */
+
+        const savedLanguage =
+            localStorage.getItem(
+                "rspTradingRulesLanguage"
+            ) || "en";
+
+
+        languageSelect.value =
+            savedLanguage;
+
+
+        changeLanguage(
+            savedLanguage
+        );
+
+
+    </script>
+
+
+</body>
+
+</html>

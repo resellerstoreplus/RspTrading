@@ -1,0 +1,3219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+      content="RspTrading Escrow Service — Secure Account & Digital Product Transactions">
+
+<title>RspTrading Escrow Service</title>
+
+
+<style>
+
+/* =========================================================
+   RSPTRADING ESCROW SERVICE
+   SINGLE FILE — HTML + CSS + JAVASCRIPT
+========================================================= */
+
+:root {
+    --bg: #08080d;
+    --surface: #101018;
+    --surface-2: #14141d;
+    --surface-3: #0d0d14;
+    --text: #f5f5f7;
+    --muted: #9a9aa8;
+    --muted-2: #6f6f7d;
+    --line: rgba(255,255,255,.09);
+    --purple: #8b5cf6;
+    --purple-light: #b49bff;
+    --purple-dark: #6036c9;
+    --green: #55e6a5;
+    --orange: #ffb866;
+    --red: #ff7070;
+    --blue: #69a9ff;
+    --max-width: 980px;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 50% -10%,
+            rgba(139,92,246,.13),
+            transparent 36%
+        ),
+        var(--bg);
+
+    color: var(--text);
+
+    line-height: 1.7;
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.topbar {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    background:
+        rgba(8,8,13,.84);
+
+    backdrop-filter:
+        blur(18px);
+
+    -webkit-backdrop-filter:
+        blur(18px);
+
+    border-bottom:
+        1px solid var(--line);
+}
+
+
+.topbar-inner {
+
+    width:
+        min(
+            var(--max-width),
+            calc(100% - 32px)
+        );
+
+    min-height: 70px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   LOGO
+
+   Put your RspTrading logo in the same folder:
+
+   logo.png
+========================================================= */
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+    font-weight: 800;
+
+    letter-spacing: -.5px;
+}
+
+
+.logo-image {
+
+    width: 36px;
+
+    height: 36px;
+
+    object-fit: contain;
+
+    border-radius: 9px;
+
+    display: block;
+}
+
+
+.logo-text span {
+
+    color:
+        var(--purple-light);
+}
+
+
+/* =========================================================
+   LANGUAGE
+========================================================= */
+
+.language-select {
+
+    appearance: none;
+
+    -webkit-appearance: none;
+
+    background:
+        var(--surface-2);
+
+    color:
+        #ddd;
+
+    border:
+        1px solid var(--line);
+
+    border-radius: 10px;
+
+    padding:
+        9px 34px 9px 12px;
+
+    font-size: 12px;
+
+    outline: none;
+
+    cursor: pointer;
+
+    background-image:
+        linear-gradient(
+            45deg,
+            transparent 50%,
+            #aaa 50%
+        ),
+        linear-gradient(
+            135deg,
+            #aaa 50%,
+            transparent 50%
+        );
+
+    background-position:
+        calc(100% - 16px) 14px,
+        calc(100% - 12px) 14px;
+
+    background-size:
+        4px 4px,
+        4px 4px;
+
+    background-repeat: no-repeat;
+}
+
+
+.language-select:hover {
+
+    border-color:
+        rgba(139,92,246,.5);
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.page {
+
+    width:
+        min(
+            var(--max-width),
+            calc(100% - 32px)
+        );
+
+    margin:
+        auto;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+    text-align: center;
+
+    padding:
+        78px 0 45px;
+}
+
+
+.eyebrow {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color:
+        var(--purple-light);
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.7px;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    margin-bottom: 17px;
+}
+
+
+.eyebrow-dot {
+
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background:
+        var(--purple);
+
+    box-shadow:
+        0 0 14px var(--purple);
+}
+
+
+.hero h1 {
+
+    font-size:
+        clamp(34px, 6vw, 58px);
+
+    line-height: 1.08;
+
+    letter-spacing: -2.8px;
+
+    margin-bottom: 18px;
+}
+
+
+.hero h1 span {
+
+    color:
+        var(--purple-light);
+}
+
+
+.hero-description {
+
+    max-width: 670px;
+
+    margin: auto;
+
+    color:
+        var(--muted);
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   SOCIAL BUTTONS
+========================================================= */
+
+.social-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin:
+        20px auto 22px;
+
+    flex-wrap: wrap;
+}
+
+
+.social-button {
+
+    width: 34px;
+
+    height: 34px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background:
+        rgba(255,255,255,.045);
+
+    border:
+        1px solid rgba(255,255,255,.09);
+
+    color:
+        #a7a7b5;
+
+    text-decoration: none;
+
+    transition:
+        all .2s ease;
+}
+
+
+.social-button svg {
+
+    width: 15px;
+
+    height: 15px;
+
+    fill: currentColor;
+
+    display: block;
+}
+
+
+.social-button:hover {
+
+    color: white;
+
+    background:
+        rgba(139,92,246,.16);
+
+    border-color:
+        rgba(139,92,246,.38);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================================
+   HERO BADGE
+========================================================= */
+
+.escrow-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 22px;
+
+    padding:
+        8px 13px;
+
+    border-radius: 100px;
+
+    background:
+        rgba(85,230,165,.06);
+
+    border:
+        1px solid rgba(85,230,165,.16);
+
+    color:
+        #8ce9be;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: .3px;
+}
+
+
+/* =========================================================
+   INTRO CARD
+========================================================= */
+
+.intro-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(139,92,246,.12),
+            rgba(255,255,255,.025)
+        );
+
+    border:
+        1px solid
+        rgba(139,92,246,.18);
+
+    border-radius: 18px;
+
+    padding: 28px;
+
+    margin-bottom: 18px;
+}
+
+
+.intro-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 190px;
+
+    height: 190px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(139,92,246,.12);
+
+    filter: blur(65px);
+
+    right: -80px;
+
+    top: -90px;
+}
+
+
+.intro-card h2 {
+
+    position: relative;
+
+    font-size: 20px;
+
+    margin-bottom: 9px;
+}
+
+
+.intro-card p {
+
+    position: relative;
+
+    color:
+        var(--muted);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.section-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin:
+        44px 0 16px;
+}
+
+
+.section-number {
+
+    width: 34px;
+
+    height: 34px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 10px;
+
+    background:
+        rgba(139,92,246,.12);
+
+    border:
+        1px solid rgba(139,92,246,.18);
+
+    color:
+        var(--purple-light);
+
+    font-size: 11px;
+
+    font-weight: 800;
+}
+
+
+.section-title h2 {
+
+    font-size: 21px;
+
+    letter-spacing: -.5px;
+}
+
+
+/* =========================================================
+   BENEFITS
+========================================================= */
+
+.benefit-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 12px;
+}
+
+
+.benefit-card {
+
+    padding: 21px;
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid var(--line);
+
+    border-radius: 15px;
+
+    transition:
+        transform .2s,
+        border-color .2s;
+}
+
+
+.benefit-card:hover {
+
+    transform:
+        translateY(-3px);
+
+    border-color:
+        rgba(139,92,246,.3);
+}
+
+
+.benefit-icon {
+
+    width: 39px;
+
+    height: 39px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 10px;
+
+    background:
+        rgba(139,92,246,.1);
+
+    font-size: 18px;
+
+    margin-bottom: 13px;
+}
+
+
+.benefit-card h3 {
+
+    font-size: 14px;
+
+    margin-bottom: 5px;
+}
+
+
+.benefit-card p {
+
+    color:
+        var(--muted);
+
+    font-size: 11px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   STEPS
+========================================================= */
+
+.steps {
+
+    display: grid;
+
+    gap: 10px;
+}
+
+
+.step {
+
+    display: grid;
+
+    grid-template-columns:
+        48px 1fr;
+
+    gap: 16px;
+
+    align-items: start;
+
+    padding: 19px;
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid var(--line);
+
+    border-radius: 14px;
+
+    transition:
+        border-color .2s,
+        transform .2s;
+}
+
+
+.step:hover {
+
+    transform:
+        translateX(3px);
+
+    border-color:
+        rgba(139,92,246,.28);
+}
+
+
+.step-number {
+
+    width: 42px;
+
+    height: 42px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(139,92,246,.2),
+            rgba(139,92,246,.06)
+        );
+
+    border:
+        1px solid rgba(139,92,246,.18);
+
+    color:
+        var(--purple-light);
+
+    font-size: 13px;
+
+    font-weight: 800;
+}
+
+
+.step h3 {
+
+    font-size: 14px;
+
+    margin-bottom: 4px;
+}
+
+
+.step p {
+
+    color:
+        var(--muted);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   FEE BOX
+========================================================= */
+
+.fee-box {
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid var(--line);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+}
+
+
+.fee-intro {
+
+    padding:
+        24px 25px;
+
+    border-bottom:
+        1px solid var(--line);
+
+    background:
+        rgba(255,255,255,.015);
+}
+
+
+.fee-intro h3 {
+
+    font-size: 17px;
+
+    margin-bottom: 6px;
+}
+
+
+.fee-intro p {
+
+    color:
+        var(--muted);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   FEE TABLE
+========================================================= */
+
+.fee-table-wrap {
+
+    overflow-x: auto;
+}
+
+
+.fee-table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 650px;
+}
+
+
+.fee-table th {
+
+    text-align: left;
+
+    padding:
+        15px 18px;
+
+    color:
+        #aaa9b5;
+
+    background:
+        rgba(255,255,255,.025);
+
+    border-bottom:
+        1px solid var(--line);
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: .8px;
+}
+
+
+.fee-table td {
+
+    padding:
+        17px 18px;
+
+    border-bottom:
+        1px solid var(--line);
+
+    font-size: 12px;
+
+    color:
+        var(--muted);
+}
+
+
+.fee-table tr:last-child td {
+
+    border-bottom: none;
+}
+
+
+.fee-table td:first-child {
+
+    color: white;
+
+    font-weight: 700;
+}
+
+
+.fee-highlight {
+
+    color:
+        var(--green) !important;
+
+    font-weight: 800;
+}
+
+
+.fee-note {
+
+    padding:
+        17px 20px;
+
+    background:
+        rgba(139,92,246,.045);
+
+    color:
+        var(--muted);
+
+    font-size: 11px;
+
+    border-top:
+        1px solid var(--line);
+}
+
+
+/* =========================================================
+   CALCULATOR
+========================================================= */
+
+.calculator {
+
+    margin-top: 14px;
+
+    padding: 23px;
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid var(--line);
+
+    border-radius: 17px;
+}
+
+
+.calculator h3 {
+
+    font-size: 16px;
+
+    margin-bottom: 6px;
+}
+
+
+.calculator-description {
+
+    color:
+        var(--muted);
+
+    font-size: 11px;
+
+    margin-bottom: 17px;
+}
+
+
+.calculator-input-row {
+
+    display: flex;
+
+    gap: 10px;
+}
+
+
+.amount-input {
+
+    flex: 1;
+
+    min-width: 0;
+
+    padding:
+        12px 14px;
+
+    border-radius: 10px;
+
+    border:
+        1px solid var(--line);
+
+    outline: none;
+
+    background:
+        var(--surface-2);
+
+    color: white;
+
+    font-size: 14px;
+}
+
+
+.amount-input:focus {
+
+    border-color:
+        rgba(139,92,246,.5);
+}
+
+
+.currency {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding:
+        0 15px;
+
+    border-radius: 10px;
+
+    background:
+        rgba(139,92,246,.1);
+
+    border:
+        1px solid rgba(139,92,246,.17);
+
+    color:
+        var(--purple-light);
+
+    font-weight: 800;
+
+    font-size: 13px;
+}
+
+
+.calculator-result {
+
+    margin-top: 14px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 10px;
+}
+
+
+.result-card {
+
+    padding: 15px;
+
+    border-radius: 11px;
+
+    background:
+        rgba(255,255,255,.025);
+
+    border:
+        1px solid var(--line);
+}
+
+
+.result-card small {
+
+    display: block;
+
+    color:
+        var(--muted-2);
+
+    font-size: 9px;
+
+    margin-bottom: 4px;
+}
+
+
+.result-card strong {
+
+    font-size: 14px;
+
+    color: white;
+}
+
+
+.result-card.total strong {
+
+    color:
+        var(--green);
+}
+
+
+/* =========================================================
+   RULES
+========================================================= */
+
+.rule-box {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 12px;
+}
+
+
+.rule {
+
+    padding: 20px;
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid var(--line);
+
+    border-radius: 15px;
+}
+
+
+.rule-icon {
+
+    font-size: 18px;
+
+    margin-bottom: 8px;
+}
+
+
+.rule h3 {
+
+    font-size: 14px;
+
+    margin-bottom: 5px;
+}
+
+
+.rule p {
+
+    color:
+        var(--muted);
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   WARNING
+========================================================= */
+
+.warning {
+
+    display: flex;
+
+    gap: 13px;
+
+    padding: 19px;
+
+    border-radius: 13px;
+
+    background:
+        rgba(255,184,102,.055);
+
+    border:
+        1px solid rgba(255,184,102,.17);
+
+    color:
+        #aaa6a0;
+
+    font-size: 11px;
+
+    line-height: 1.75;
+}
+
+
+.warning-icon {
+
+    font-size: 18px;
+
+    min-width: 23px;
+}
+
+
+.warning strong {
+
+    color:
+        var(--orange);
+}
+
+
+/* =========================================================
+   DISPUTE
+========================================================= */
+
+.dispute {
+
+    padding: 23px;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,112,112,.06),
+            rgba(255,255,255,.015)
+        );
+
+    border:
+        1px solid rgba(255,112,112,.14);
+}
+
+
+.dispute h3 {
+
+    color:
+        #ff9b9b;
+
+    font-size: 15px;
+
+    margin-bottom: 8px;
+}
+
+
+.dispute p {
+
+    color:
+        var(--muted);
+
+    font-size: 12px;
+}
+
+
+.dispute p + p {
+
+    margin-top: 10px;
+}
+
+
+/* =========================================================
+   FINAL CARD
+========================================================= */
+
+.final-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    margin:
+        55px 0 70px;
+
+    padding:
+        42px 30px;
+
+    text-align: center;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #4d2aaf,
+            #28184f
+        );
+
+    border:
+        1px solid rgba(255,255,255,.1);
+
+    box-shadow:
+        0 25px 70px
+        rgba(0,0,0,.3);
+}
+
+
+.final-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 240px;
+
+    height: 240px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,.07);
+
+    filter: blur(60px);
+
+    top: -160px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+}
+
+
+.final-card h2 {
+
+    position: relative;
+
+    font-size: 27px;
+
+    margin-bottom: 11px;
+}
+
+
+.final-card p {
+
+    position: relative;
+
+    max-width: 650px;
+
+    margin: auto;
+
+    color:
+        #d8d0ee;
+
+    font-size: 13px;
+}
+
+
+.signature {
+
+    position: relative;
+
+    margin-top: 23px;
+
+    font-weight: 800;
+
+    font-size: 14px;
+
+    color: white;
+}
+
+
+.tagline {
+
+    position: relative;
+
+    margin-top: 5px;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    color:
+        #c6b8e8;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+
+    border-top:
+        1px solid var(--line);
+
+    padding:
+        25px 0 28px;
+
+    text-align: center;
+
+    color:
+        var(--muted-2);
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 760px) {
+
+    .benefit-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .hero {
+
+        padding:
+            55px 0 38px;
+    }
+
+
+    .hero h1 {
+
+        letter-spacing:
+            -1.8px;
+    }
+
+
+    .rule-box {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .calculator-result {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .calculator-input-row {
+
+        flex-direction: column;
+    }
+
+
+    .currency {
+
+        min-height: 42px;
+    }
+
+
+    .final-card {
+
+        padding:
+            32px 20px;
+
+        margin-bottom:
+            45px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .topbar-inner {
+
+        min-height: 64px;
+    }
+
+
+    .logo {
+
+        font-size: 16px;
+    }
+
+
+    .logo-image {
+
+        width: 31px;
+
+        height: 31px;
+    }
+
+
+    .language-select {
+
+        font-size: 11px;
+
+        padding:
+            8px 29px 8px 9px;
+    }
+
+
+    .page {
+
+        width:
+            calc(100% - 24px);
+    }
+
+
+    .hero-description {
+
+        font-size: 12px;
+    }
+
+
+    .intro-card {
+
+        padding: 21px;
+    }
+
+
+    .step {
+
+        grid-template-columns:
+            40px 1fr;
+
+        gap: 12px;
+
+        padding: 16px;
+    }
+
+
+    .step-number {
+
+        width: 36px;
+
+        height: 36px;
+    }
+
+
+    .social-button {
+
+        width: 32px;
+
+        height: 32px;
+
+        border-radius: 8px;
+    }
+
+
+    .social-button svg {
+
+        width: 14px;
+
+        height: 14px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="topbar">
+
+    <div class="topbar-inner">
+
+
+        <a href="#top"
+           class="logo">
+
+
+            <!--
+                YOUR RSPTRADING LOGO
+                Put logo.png in the same folder.
+            -->
+
+            <img
+                src="../assets/logo.jpg"
+                alt="RspTrading Logo"
+                class="logo-image"
+                onerror="this.style.display='none';">
+
+
+            <span class="logo-text">
+
+                Rsp<span>Trading</span>
+
+            </span>
+
+
+        </a>
+
+
+        <select
+            id="languageSelect"
+            class="language-select">
+
+
+            <option value="en">
+                🇬🇧 English
+            </option>
+
+
+            <option value="bn">
+                🇧🇩 বাংলা
+            </option>
+
+
+        </select>
+
+
+    </div>
+
+</header>
+
+
+
+<main id="top">
+
+
+<div class="page">
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero">
+
+
+    <div class="eyebrow">
+
+        <span class="eyebrow-dot"></span>
+
+        <span data-i18n="eyebrow">
+            Secure Transactions
+        </span>
+
+    </div>
+
+
+    <h1>
+
+        <span data-i18n="heroTitle">
+            RspTrading
+        </span>
+
+        <br>
+
+        <span data-i18n="heroTitle2">
+            Escrow Service
+        </span>
+
+    </h1>
+
+
+    <!-- SOCIAL MEDIA BUTTONS -->
+
+    <div class="social-buttons">
+
+
+        <!-- FACEBOOK -->
+
+        <a
+            href="https://www.facebook.com/RspTradingHQ"
+            class="social-button"
+            aria-label="Facebook"
+            title="Facebook">
+
+            <svg viewBox="0 0 24 24">
+
+                <path
+                    d="M14 8h3V4h-3c-3.314 0-5 1.686-5 5v3H6v4h3v8h4v-8h3l1-4h-4V9c0-.667.333-1 1-1z"/>
+
+            </svg>
+
+        </a>
+
+
+        <!-- TWITTER / X -->
+
+        <a
+            href="https://twitter.com/RspHelp/"
+            class="social-button"
+            aria-label="Twitter / X"
+            title="Twitter / X">
+
+            <svg viewBox="0 0 24 24">
+
+                <path
+                    d="M18.244 2H21.5l-7.11 8.13L22.75 22h-6.62l-5.18-6.78L5.02 22H1.76l7.61-8.7L1.25 2h6.79l4.68 6.19L18.244 2Zm-1.16 17.93h1.8L6.94 3.95H5.01l12.074 15.98Z"/>
+
+            </svg>
+
+        </a>
+
+
+        <!-- TELEGRAM -->
+
+        <a
+            href="https://t.me/RspTradingHQ"
+            class="social-button"
+            aria-label="Telegram"
+            title="Telegram">
+
+            <svg viewBox="0 0 24 24">
+
+                <path
+                    d="M21.9 3.2 18.6 20c-.25 1.19-.91 1.48-1.84.92l-5.06-3.73-2.44 2.35c-.27.27-.5.5-1.03.5l.37-5.17 9.41-8.5c.41-.37-.09-.58-.64-.21L5.74 13.1.75 11.54c-1.09-.34-1.11-1.09.23-1.59L20.48 2.6c.89-.33 1.67.21 1.42.6Z"/>
+
+            </svg>
+
+        </a>
+
+
+        <!-- TELEGRAM GROUP -->
+
+        <a
+            href="https://t.me/+AvQmbJSfyk1iMWNl"
+            class="social-button"
+            aria-label="Telegram Group"
+            title="Telegram Group">
+
+            <svg viewBox="0 0 24 24">
+
+                <path
+                    d="M16 11c1.66 0 3-1.57 3-3.5S17.66 4 16 4s-3 1.57-3 3.5 1.34 3.5 3 3.5Zm-8 0c1.66 0 3-1.57 3-3.5S9.66 4 8 4 5 5.57 5 7.5 6.34 11 8 11Zm0 2c-2.33 0-7 1.17-7 3.5V20h14v-3.5C15 14.17 10.33 13 8 13Zm8 0c-.29 0-.62.02-.97.05 1.18.85 1.97 2.01 1.97 3.45V20h6v-3.5c0-2.33-4.67-3.5-7-3.5Z"/>
+
+            </svg>
+
+        </a>
+
+
+        <!-- INSTAGRAM -->
+
+        <a
+            href="http://t.me/RspTradingHQ?direct"
+            class="social-button"
+            aria-label="Instagram"
+            title="Instagram">
+
+            <svg viewBox="0 0 24 24">
+
+                <path
+                    d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8Zm8.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/>
+
+            </svg>
+
+        </a>
+
+
+    </div>
+
+
+    <p class="hero-description"
+       data-i18n="heroDescription">
+
+        A trusted middle layer designed to help Buyers and Sellers
+        complete Account and Digital Product transactions more safely.
+
+    </p>
+
+
+    <div class="escrow-badge">
+
+        🛡️
+
+        <span data-i18n="badge">
+            Buyer Protection • Seller Protection • Secure Process
+        </span>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     INTRO
+========================================================= -->
+
+<section class="intro-card">
+
+
+    <h2 data-i18n="introTitle">
+
+        🛡️ What is RspTrading Escrow?
+
+    </h2>
+
+
+    <p data-i18n="introText">
+
+        RspTrading Escrow Service acts as a trusted intermediary
+        between the Buyer and Seller. Instead of sending payment
+        directly to the Seller, the Buyer deposits the agreed amount
+        with RspTrading. After the Account/Product is transferred
+        and the Buyer confirms everything is correct, RspTrading
+        releases the payment to the Seller.
+
+    </p>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     WHY ESCROW
+========================================================= -->
+
+<div class="section-title">
+
+    <div class="section-number">
+        01
+    </div>
+
+    <h2 data-i18n="whyTitle">
+        Why Use Escrow?
+    </h2>
+
+</div>
+
+
+<section class="benefit-grid">
+
+
+    <article class="benefit-card">
+
+        <div class="benefit-icon">
+            🛡️
+        </div>
+
+        <h3 data-i18n="benefit1Title">
+            Safer Payment
+        </h3>
+
+        <p data-i18n="benefit1Text">
+            The Buyer does not need to send the payment
+            directly to an unknown Seller.
+        </p>
+
+    </article>
+
+
+    <article class="benefit-card">
+
+        <div class="benefit-icon">
+            🤝
+        </div>
+
+        <h3 data-i18n="benefit2Title">
+            Trusted Middle Layer
+        </h3>
+
+        <p data-i18n="benefit2Text">
+            RspTrading stays between the Buyer and Seller
+            during the agreed Escrow process.
+        </p>
+
+    </article>
+
+
+    <article class="benefit-card">
+
+        <div class="benefit-icon">
+            🔍
+        </div>
+
+        <h3 data-i18n="benefit3Title">
+            Verification
+        </h3>
+
+        <p data-i18n="benefit3Text">
+            Payment and transaction details can be checked
+            before the transaction proceeds.
+        </p>
+
+    </article>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     HOW IT WORKS
+========================================================= -->
+
+<div class="section-title">
+
+    <div class="section-number">
+        02
+    </div>
+
+    <h2 data-i18n="howTitle">
+        How RspTrading Escrow Works
+    </h2>
+
+</div>
+
+
+<section class="steps">
+
+
+    <article class="step">
+
+        <div class="step-number">
+            01
+        </div>
+
+        <div>
+
+            <h3 data-i18n="step1Title">
+                Buyer & Seller Agree
+            </h3>
+
+            <p data-i18n="step1Text">
+                Both parties discuss the Account/Product,
+                condition, price and all other important terms.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <article class="step">
+
+        <div class="step-number">
+            02
+        </div>
+
+        <div>
+
+            <h3 data-i18n="step2Title">
+                Seller → RspTrading
+            </h3>
+
+            <p data-i18n="step2Text">
+                The Seller transfers the agreed Account/Product
+                information or access to RspTrading for verification
+                and transaction processing.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <article class="step">
+
+        <div class="step-number">
+            03
+        </div>
+
+        <div>
+
+            <h3 data-i18n="step3Title">
+                Buyer → RspTrading
+            </h3>
+
+            <p data-i18n="step3Text">
+                The Buyer deposits the agreed transaction amount
+                into the RspTrading Escrow.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <article class="step">
+
+        <div class="step-number">
+            04
+        </div>
+
+        <div>
+
+            <h3 data-i18n="step4Title">
+                Payment Verification
+            </h3>
+
+            <p data-i18n="step4Text">
+                RspTrading verifies the payment before moving
+                the transaction to the delivery stage.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <article class="step">
+
+        <div class="step-number">
+            05
+        </div>
+
+        <div>
+
+            <h3 data-i18n="step5Title">
+                RspTrading → Buyer
+            </h3>
+
+            <p data-i18n="step5Text">
+                Once payment is confirmed, the Account/Product
+                is delivered to the Buyer.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <article class="step">
+
+        <div class="step-number">
+            06
+        </div>
+
+        <div>
+
+            <h3 data-i18n="step6Title">
+                Buyer Confirmation
+            </h3>
+
+            <p data-i18n="step6Text">
+                The Buyer checks the Account/Product and confirms
+                that it has been received according to the agreed terms.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <article class="step">
+
+        <div class="step-number">
+            07
+        </div>
+
+        <div>
+
+            <h3 data-i18n="step7Title">
+                RspTrading → Seller
+            </h3>
+
+            <p data-i18n="step7Text">
+                After the Buyer's confirmation, RspTrading releases
+                the payment to the Seller.
+            </p>
+
+        </div>
+
+    </article>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     FEES
+========================================================= -->
+
+<div class="section-title">
+
+    <div class="section-number">
+        03
+    </div>
+
+    <h2 data-i18n="feeTitle">
+        RspTrading Escrow Fees
+    </h2>
+
+</div>
+
+
+<section class="fee-box">
+
+
+    <div class="fee-intro">
+
+        <h3 data-i18n="feeIntroTitle">
+            Simple & Transparent Pricing
+        </h3>
+
+        <p data-i18n="feeIntroText">
+            Escrow charges are based on the total transaction value.
+            The applicable fee is charged separately to both Buyer and Seller.
+        </p>
+
+    </div>
+
+
+    <div class="fee-table-wrap">
+
+        <table class="fee-table">
+
+
+            <thead>
+
+                <tr>
+
+                    <th data-i18n="feeCol1">
+                        Transaction Value
+                    </th>
+
+                    <th data-i18n="feeCol2">
+                        Buyer Fee
+                    </th>
+
+                    <th data-i18n="feeCol3">
+                        Seller Fee
+                    </th>
+
+                    <th data-i18n="feeCol4">
+                        Total Escrow Fee
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+
+                <!-- $1 - $100 -->
+
+                <tr>
+
+                    <td>
+                        $1 – $100
+                    </td>
+
+                    <td class="fee-highlight">
+                        $0.50
+                    </td>
+
+                    <td class="fee-highlight">
+                        $0.50
+                    </td>
+
+                    <td>
+                        $1.00
+                    </td>
+
+                </tr>
+
+
+                <!-- $100.01 - $500 -->
+
+                <tr>
+
+                    <td>
+                        $100.01 – $500
+                    </td>
+
+                    <td class="fee-highlight">
+                        $2
+                    </td>
+
+                    <td class="fee-highlight">
+                        $2
+                    </td>
+
+                    <td>
+                        $4
+                    </td>
+
+                </tr>
+
+
+                <!-- $500.01 - $1000 -->
+
+                <tr>
+
+                    <td>
+                        $500.01 – $1,000
+                    </td>
+
+                    <td class="fee-highlight">
+                        $5
+                    </td>
+
+                    <td class="fee-highlight">
+                        $5
+                    </td>
+
+                    <td>
+                        $10
+                    </td>
+
+                </tr>
+
+
+                <!-- $1000+ -->
+
+                <tr>
+
+                    <td>
+                        $1,000+
+                    </td>
+
+                    <td class="fee-highlight">
+                        0.5%
+                    </td>
+
+                    <td class="fee-highlight">
+                        0.5%
+                    </td>
+
+                    <td>
+                        1%
+                    </td>
+
+                </tr>
+
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+    <div class="fee-note">
+
+        <span data-i18n="feeNote">
+
+            Example: For a $200 transaction, the Buyer pays
+            $2 Escrow Fee and the Seller pays $2 Escrow Fee.
+            Total Escrow Fee = $4.
+
+        </span>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     FEE CALCULATOR
+========================================================= -->
+
+<section class="calculator">
+
+
+    <h3 data-i18n="calculatorTitle">
+        💰 Escrow Fee Calculator
+    </h3>
+
+
+    <p class="calculator-description"
+       data-i18n="calculatorDescription">
+
+        Enter the transaction amount to see the applicable
+        Buyer and Seller Escrow fees.
+
+    </p>
+
+
+    <div class="calculator-input-row">
+
+
+        <input
+            type="number"
+            id="amountInput"
+            class="amount-input"
+            min="0"
+            step="0.01"
+            placeholder="Enter transaction amount">
+
+
+        <div class="currency">
+            USD
+        </div>
+
+
+    </div>
+
+
+    <div class="calculator-result">
+
+
+        <div class="result-card">
+
+            <small data-i18n="buyerFee">
+                Buyer Fee
+            </small>
+
+            <strong id="buyerFee">
+                $0.50
+            </strong>
+
+        </div>
+
+
+        <div class="result-card">
+
+            <small data-i18n="sellerFee">
+                Seller Fee
+            </small>
+
+            <strong id="sellerFee">
+                $0.50
+            </strong>
+
+        </div>
+
+
+        <div class="result-card total">
+
+            <small data-i18n="totalFee">
+                Total Escrow Fee
+            </small>
+
+            <strong id="totalFee">
+                $1.00
+            </strong>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     RULES
+========================================================= -->
+
+<div class="section-title">
+
+    <div class="section-number">
+        04
+    </div>
+
+    <h2 data-i18n="rulesTitle">
+        Escrow Rules & Important Conditions
+    </h2>
+
+</div>
+
+
+<section class="rule-box">
+
+
+    <article class="rule">
+
+        <div class="rule-icon">
+            🤝
+        </div>
+
+        <h3 data-i18n="rule1Title">
+            Agree Before Escrow
+        </h3>
+
+        <p data-i18n="rule1Text">
+            Buyer and Seller should agree on the Account/Product,
+            price and conditions before starting the Escrow process.
+        </p>
+
+    </article>
+
+
+    <article class="rule">
+
+        <div class="rule-icon">
+            🔐
+        </div>
+
+        <h3 data-i18n="rule2Title">
+            Keep Information Secure
+        </h3>
+
+        <p data-i18n="rule2Text">
+            Do not publicly share passwords, recovery codes,
+            2FA codes or sensitive personal information.
+        </p>
+
+    </article>
+
+
+    <article class="rule">
+
+        <div class="rule-icon">
+            🚫
+        </div>
+
+        <h3 data-i18n="rule3Title">
+            No Direct Transaction
+        </h3>
+
+        <p data-i18n="rule3Text">
+            To use the protection of the RspTrading Escrow process,
+            the transaction must actually go through the official
+            RspTrading Escrow Service.
+        </p>
+
+    </article>
+
+
+    <article class="rule">
+
+        <div class="rule-icon">
+            📋
+        </div>
+
+        <h3 data-i18n="rule4Title">
+            Accurate Information
+        </h3>
+
+        <p data-i18n="rule4Text">
+            Both parties must provide accurate and complete
+            information about the Account/Product and transaction.
+        </p>
+
+    </article>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     DISPUTE
+========================================================= -->
+
+<div class="section-title">
+
+    <div class="section-number">
+        05
+    </div>
+
+    <h2 data-i18n="disputeSectionTitle">
+        Dispute & Suspicious Activity
+    </h2>
+
+</div>
+
+
+<section class="dispute">
+
+
+    <h3 data-i18n="disputeTitle">
+        ⚠️ Transaction Review & Temporary Freeze
+    </h3>
+
+
+    <p data-i18n="disputeText">
+
+        If RspTrading detects suspicious activity, inconsistent
+        information, payment problems, an Account/Product issue,
+        or unusual behavior during an Escrow Transaction, RspTrading
+        may suspend the transaction and temporarily freeze the
+        Escrow funds while the matter is reviewed.
+
+    </p>
+
+
+    <p data-i18n="disputeText2">
+
+        Until the required verification is completed, RspTrading
+        may delay releasing the funds or Account/Product to either
+        party. The final action may depend on the available evidence,
+        transaction records and applicable Escrow conditions.
+
+    </p>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     WARNING
+========================================================= -->
+
+<div style="margin-top:18px;">
+
+<section class="warning">
+
+
+    <div class="warning-icon">
+        ⚠️
+    </div>
+
+
+    <div>
+
+        <strong data-i18n="warningTitle">
+            Important:
+        </strong>
+
+
+        <span data-i18n="warningText">
+
+            RspTrading Escrow is designed to provide a safer
+            transaction process, but no Escrow service can guarantee
+            that every transaction will be completely risk-free.
+            Always verify the Account/Product and agreed terms
+            before proceeding.
+
+        </span>
+
+    </div>
+
+
+</section>
+
+</div>
+
+
+
+<!-- =========================================================
+     OFF PLATFORM
+========================================================= -->
+
+<div style="margin-top:12px;">
+
+<section class="warning">
+
+
+    <div class="warning-icon">
+        🚫
+    </div>
+
+
+    <div>
+
+        <strong data-i18n="offPlatformTitle">
+            Transactions outside RspTrading Escrow:
+        </strong>
+
+
+        <span data-i18n="offPlatformText">
+
+            If a Buyer or Seller chooses to bypass the official
+            RspTrading Escrow Service and completes a direct
+            transaction through another method, RspTrading will
+            not be responsible for any resulting fraud, payment
+            dispute, loss or other damage.
+
+        </span>
+
+
+    </div>
+
+
+</section>
+
+</div>
+
+
+
+<!-- =========================================================
+     FINAL
+========================================================= -->
+
+<section class="final-card">
+
+
+    <h2 data-i18n="finalTitle">
+        Trade With More Confidence.
+    </h2>
+
+
+    <p data-i18n="finalText">
+
+        Use RspTrading Escrow when you want a structured process
+        between Buyer and Seller. Agree on the terms, verify the
+        Account/Product, follow the Escrow steps and complete the
+        transaction through the official RspTrading process.
+
+    </p>
+
+
+    <div class="signature">
+        — RspTrading
+    </div>
+
+
+    <div class="tagline">
+        Buy • Sell • Trade • Trust
+    </div>
+
+
+</section>
+
+
+</div>
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="footer">
+
+    <div class="page">
+
+        <span data-i18n="copyright">
+            © 2026 RspTrading
+        </span>
+
+        <br>
+
+        <span data-i18n="footerText">
+            Escrow Service • Buy • Sell • Trade • Trust
+        </span>
+
+    </div>
+
+</footer>
+
+
+
+<script>
+
+/* =========================================================
+   TRANSLATIONS
+========================================================= */
+
+const translations = {
+
+    en: {
+
+        eyebrow:
+        "Secure Transactions",
+
+        heroTitle:
+        "RspTrading",
+
+        heroTitle2:
+        "Escrow Service",
+
+        heroDescription:
+        "A trusted middle layer designed to help Buyers and Sellers complete Account and Digital Product transactions more safely.",
+
+        badge:
+        "Buyer Protection • Seller Protection • Secure Process",
+
+        introTitle:
+        "🛡️ What is RspTrading Escrow?",
+
+        introText:
+        "RspTrading Escrow Service acts as a trusted intermediary between the Buyer and Seller. Instead of sending payment directly to the Seller, the Buyer deposits the agreed amount with RspTrading. After the Account/Product is transferred and the Buyer confirms everything is correct, RspTrading releases the payment to the Seller.",
+
+        whyTitle:
+        "Why Use Escrow?",
+
+        benefit1Title:
+        "Safer Payment",
+
+        benefit1Text:
+        "The Buyer does not need to send the payment directly to an unknown Seller.",
+
+        benefit2Title:
+        "Trusted Middle Layer",
+
+        benefit2Text:
+        "RspTrading stays between the Buyer and Seller during the agreed Escrow process.",
+
+        benefit3Title:
+        "Verification",
+
+        benefit3Text:
+        "Payment and transaction details can be checked before the transaction proceeds.",
+
+        howTitle:
+        "How RspTrading Escrow Works",
+
+        step1Title:
+        "Buyer & Seller Agree",
+
+        step1Text:
+        "Both parties discuss the Account/Product, condition, price and all other important terms.",
+
+        step2Title:
+        "Seller → RspTrading",
+
+        step2Text:
+        "The Seller transfers the agreed Account/Product information or access to RspTrading for verification and transaction processing.",
+
+        step3Title:
+        "Buyer → RspTrading",
+
+        step3Text:
+        "The Buyer deposits the agreed transaction amount into the RspTrading Escrow.",
+
+        step4Title:
+        "Payment Verification",
+
+        step4Text:
+        "RspTrading verifies the payment before moving the transaction to the delivery stage.",
+
+        step5Title:
+        "RspTrading → Buyer",
+
+        step5Text:
+        "Once payment is confirmed, the Account/Product is delivered to the Buyer.",
+
+        step6Title:
+        "Buyer Confirmation",
+
+        step6Text:
+        "The Buyer checks the Account/Product and confirms that it has been received according to the agreed terms.",
+
+        step7Title:
+        "RspTrading → Seller",
+
+        step7Text:
+        "After the Buyer's confirmation, RspTrading releases the payment to the Seller.",
+
+        feeTitle:
+        "RspTrading Escrow Fees",
+
+        feeIntroTitle:
+        "Simple & Transparent Pricing",
+
+        feeIntroText:
+        "Escrow charges are based on the total transaction value. The applicable fee is charged separately to both Buyer and Seller.",
+
+        feeCol1:
+        "Transaction Value",
+
+        feeCol2:
+        "Buyer Fee",
+
+        feeCol3:
+        "Seller Fee",
+
+        feeCol4:
+        "Total Escrow Fee",
+
+        feeNote:
+        "Example: For a $200 transaction, the Buyer pays $2 Escrow Fee and the Seller pays $2 Escrow Fee. Total Escrow Fee = $4.",
+
+        calculatorTitle:
+        "💰 Escrow Fee Calculator",
+
+        calculatorDescription:
+        "Enter the transaction amount to see the applicable Buyer and Seller Escrow fees.",
+
+        buyerFee:
+        "Buyer Fee",
+
+        sellerFee:
+        "Seller Fee",
+
+        totalFee:
+        "Total Escrow Fee",
+
+        rulesTitle:
+        "Escrow Rules & Important Conditions",
+
+        rule1Title:
+        "Agree Before Escrow",
+
+        rule1Text:
+        "Buyer and Seller should agree on the Account/Product, price and conditions before starting the Escrow process.",
+
+        rule2Title:
+        "Keep Information Secure",
+
+        rule2Text:
+        "Do not publicly share passwords, recovery codes, 2FA codes or sensitive personal information.",
+
+        rule3Title:
+        "No Direct Transaction",
+
+        rule3Text:
+        "To use the protection of the RspTrading Escrow process, the transaction must actually go through the official RspTrading Escrow Service.",
+
+        rule4Title:
+        "Accurate Information",
+
+        rule4Text:
+        "Both parties must provide accurate and complete information about the Account/Product and transaction.",
+
+        disputeSectionTitle:
+        "Dispute & Suspicious Activity",
+
+        disputeTitle:
+        "⚠️ Transaction Review & Temporary Freeze",
+
+        disputeText:
+        "If RspTrading detects suspicious activity, inconsistent information, payment problems, an Account/Product issue, or unusual behavior during an Escrow Transaction, RspTrading may suspend the transaction and temporarily freeze the Escrow funds while the matter is reviewed.",
+
+        disputeText2:
+        "Until the required verification is completed, RspTrading may delay releasing the funds or Account/Product to either party. The final action may depend on the available evidence, transaction records and applicable Escrow conditions.",
+
+        warningTitle:
+        "Important:",
+
+        warningText:
+        "RspTrading Escrow is designed to provide a safer transaction process, but no Escrow service can guarantee that every transaction will be completely risk-free. Always verify the Account/Product and agreed terms before proceeding.",
+
+        offPlatformTitle:
+        "Transactions outside RspTrading Escrow:",
+
+        offPlatformText:
+        "If a Buyer or Seller chooses to bypass the official RspTrading Escrow Service and completes a direct transaction through another method, RspTrading will not be responsible for any resulting fraud, payment dispute, loss or other damage.",
+
+        finalTitle:
+        "Trade With More Confidence.",
+
+        finalText:
+        "Use RspTrading Escrow when you want a structured process between Buyer and Seller. Agree on the terms, verify the Account/Product, follow the Escrow steps and complete the transaction through the official RspTrading process.",
+
+        copyright:
+        "© 2026 RspTrading",
+
+        footerText:
+        "Escrow Service • Buy • Sell • Trade • Trust"
+
+    },
+
+
+    bn: {
+
+        eyebrow:
+        "নিরাপদ লেনদেন",
+
+        heroTitle:
+        "RspTrading",
+
+        heroTitle2:
+        "Escrow Service",
+
+        heroDescription:
+        "Buyer ও Seller-এর মধ্যে Account এবং Digital Product-এর লেনদেন আরও নিরাপদ ও সংগঠিতভাবে সম্পন্ন করতে একটি Trusted Middle Layer.",
+
+        badge:
+        "Buyer Protection • Seller Protection • Secure Process",
+
+        introTitle:
+        "🛡️ RspTrading Escrow কী?",
+
+        introText:
+        "RspTrading Escrow Service Buyer ও Seller-এর মধ্যে একটি Trusted Intermediary হিসেবে কাজ করে। Buyer সরাসরি Seller-কে Payment দেওয়ার পরিবর্তে সম্মত অর্থ RspTrading-এর Escrow-তে জমা করেন। Account/Product হস্তান্তর এবং Buyer সবকিছু সঠিকভাবে পাওয়ার Confirmation দেওয়ার পর RspTrading Seller-কে Payment প্রদান করে।",
+
+        whyTitle:
+        "Escrow কেন গুরুত্বপূর্ণ?",
+
+        benefit1Title:
+        "নিরাপদ Payment",
+
+        benefit1Text:
+        "Buyer-কে অপরিচিত Seller-এর কাছে সরাসরি Payment পাঠাতে হয় না।",
+
+        benefit2Title:
+        "Trusted Middle Layer",
+
+        benefit2Text:
+        "সম্মত Escrow Process চলাকালীন RspTrading Buyer ও Seller-এর মধ্যবর্তী পক্ষ হিসেবে থাকে।",
+
+        benefit3Title:
+        "Verification",
+
+        benefit3Text:
+        "Transaction এগিয়ে নেওয়ার আগে Payment ও Transaction-এর গুরুত্বপূর্ণ তথ্য যাচাই করা যেতে পারে।",
+
+        howTitle:
+        "RspTrading Escrow কীভাবে কাজ করে?",
+
+        step1Title:
+        "Buyer & Seller সম্মত হন",
+
+        step1Text:
+        "উভয় পক্ষ Account/Product, অবস্থা, মূল্য এবং অন্যান্য গুরুত্বপূর্ণ শর্ত নিয়ে বিস্তারিত আলোচনা করে সম্মত হবেন।",
+
+        step2Title:
+        "Seller → RspTrading",
+
+        step2Text:
+        "Seller সম্মত Account/Product-এর তথ্য বা Access RspTrading-এর কাছে Verification ও Transaction Processing-এর জন্য হস্তান্তর করবেন।",
+
+        step3Title:
+        "Buyer → RspTrading",
+
+        step3Text:
+        "Buyer সম্মত Transaction Amount RspTrading Escrow-তে জমা করবেন।",
+
+        step4Title:
+        "Payment Verification",
+
+        step4Text:
+        "RspTrading Payment গ্রহণ ও Verification করার পর Transaction Delivery Stage-এ যাবে।",
+
+        step5Title:
+        "RspTrading → Buyer",
+
+        step5Text:
+        "Payment নিশ্চিত হওয়ার পর Account/Product Buyer-এর কাছে হস্তান্তর করা হবে।",
+
+        step6Title:
+        "Buyer Confirmation",
+
+        step6Text:
+        "Buyer Account/Product যাচাই করে নিশ্চিত করবেন যে তিনি নির্ধারিত শর্ত অনুযায়ী সঠিকভাবে পেয়েছেন।",
+
+        step7Title:
+        "RspTrading → Seller",
+
+        step7Text:
+        "Buyer-এর Confirmation পাওয়ার পর RspTrading Seller-কে Payment প্রদান করবে।",
+
+        feeTitle:
+        "RspTrading Escrow Fees",
+
+        feeIntroTitle:
+        "সহজ ও স্বচ্ছ Pricing",
+
+        feeIntroText:
+        "Escrow Fee মোট Transaction Value-এর ওপর নির্ভর করে। প্রযোজ্য Fee Buyer এবং Seller উভয়ের কাছ থেকে আলাদাভাবে নেওয়া হবে।",
+
+        feeCol1:
+        "Transaction Value",
+
+        feeCol2:
+        "Buyer Fee",
+
+        feeCol3:
+        "Seller Fee",
+
+        feeCol4:
+        "Total Escrow Fee",
+
+        feeNote:
+        "উদাহরণ: $200 Transaction-এর ক্ষেত্রে Buyer $2 Escrow Fee এবং Seller $2 Escrow Fee প্রদান করবেন। Total Escrow Fee = $4।",
+
+        calculatorTitle:
+        "💰 Escrow Fee Calculator",
+
+        calculatorDescription:
+        "Transaction Amount লিখলে প্রযোজ্য Buyer ও Seller Escrow Fee দেখতে পারবেন।",
+
+        buyerFee:
+        "Buyer Fee",
+
+        sellerFee:
+        "Seller Fee",
+
+        totalFee:
+        "Total Escrow Fee",
+
+        rulesTitle:
+        "Escrow-এর নিয়ম ও গুরুত্বপূর্ণ শর্ত",
+
+        rule1Title:
+        "Escrow শুরু করার আগে সম্মতি",
+
+        rule1Text:
+        "Escrow শুরু করার আগে Buyer ও Seller Account/Product, মূল্য এবং অন্যান্য শর্তে সম্মত হবেন।",
+
+        rule2Title:
+        "তথ্য নিরাপদ রাখুন",
+
+        rule2Text:
+        "Password, Recovery Code, 2FA Code বা গুরুত্বপূর্ণ ব্যক্তিগত তথ্য প্রকাশ্যে শেয়ার করবেন না।",
+
+        rule3Title:
+        "সরাসরি Transaction নয়",
+
+        rule3Text:
+        "RspTrading Escrow-এর সুবিধা ও প্রক্রিয়ার আওতায় থাকতে হলে Transaction অবশ্যই Official RspTrading Escrow Service-এর মাধ্যমে সম্পন্ন করতে হবে।",
+
+        rule4Title:
+        "সঠিক তথ্য প্রদান",
+
+        rule4Text:
+        "Buyer ও Seller উভয়কেই Account/Product এবং Transaction সম্পর্কে সঠিক ও সম্পূর্ণ তথ্য প্রদান করতে হবে।",
+
+        disputeSectionTitle:
+        "Dispute & Suspicious Activity",
+
+        disputeTitle:
+        "⚠️ Transaction Review & Temporary Freeze",
+
+        disputeText:
+        "Escrow Transaction চলাকালীন RspTrading কোনো সন্দেহজনক কার্যক্রম, তথ্যের অসঙ্গতি, Payment সমস্যা, Account/Product সমস্যা অথবা অস্বাভাবিক আচরণ শনাক্ত করলে প্রয়োজন অনুযায়ী Transaction স্থগিত এবং বিষয়টি যাচাই চলাকালীন Escrow-এর অর্থ সাময়িকভাবে Freeze করে রাখতে পারে।",
+
+        disputeText2:
+        "প্রয়োজনীয় Verification সম্পন্ন না হওয়া পর্যন্ত RspTrading কোনো পক্ষের কাছে অর্থ বা Account/Product হস্তান্তর বিলম্বিত করতে পারে। চূড়ান্ত সিদ্ধান্ত প্রাপ্ত প্রমাণ, Transaction Records এবং প্রযোজ্য Escrow Conditions-এর ওপর নির্ভর করতে পারে।",
+
+        warningTitle:
+        "গুরুত্বপূর্ণ:",
+
+        warningText:
+        "RspTrading Escrow একটি আরও নিরাপদ Transaction Process দেওয়ার উদ্দেশ্যে তৈরি করা হয়েছে। তবে কোনো Escrow Service-ই প্রতিটি Transaction সম্পূর্ণ ঝুঁকিমুক্ত হওয়ার নিশ্চয়তা দিতে পারে না। Transaction শুরু করার আগে সবসময় Account/Product এবং সম্মত শর্তগুলো যাচাই করুন।",
+
+        offPlatformTitle:
+        "RspTrading Escrow-এর বাইরে Transaction:",
+
+        offPlatformText:
+        "কোনো Buyer বা Seller যদি Official RspTrading Escrow Service এড়িয়ে অন্য কোনো মাধ্যমে সরাসরি Transaction সম্পন্ন করেন, তাহলে সেই Transaction থেকে হওয়া কোনো প্রতারণা, Payment Dispute, আর্থিক ক্ষতি বা অন্য কোনো ক্ষতির জন্য RspTrading দায়ী থাকবে না।",
+
+        finalTitle:
+        "আরও আত্মবিশ্বাসের সঙ্গে Trade করুন।",
+
+        finalText:
+        "Buyer ও Seller-এর মধ্যে একটি সংগঠিত Transaction Process চাইলে RspTrading Escrow ব্যবহার করুন। শর্তে সম্মত হন, Account/Product যাচাই করুন, Escrow-এর ধাপগুলো অনুসরণ করুন এবং Official RspTrading Process-এর মাধ্যমে Transaction সম্পন্ন করুন।",
+
+        copyright:
+        "© 2026 RspTrading",
+
+        footerText:
+        "Escrow Service • Buy • Sell • Trade • Trust"
+
+    }
+
+};
+
+
+/* =========================================================
+   LANGUAGE CHANGE
+========================================================= */
+
+function changeLanguage(language) {
+
+    const elements =
+        document.querySelectorAll(
+            "[data-i18n]"
+        );
+
+
+    elements.forEach(function(element) {
+
+        const key =
+            element.getAttribute(
+                "data-i18n"
+            );
+
+
+        if (
+            translations[language] &&
+            translations[language][key]
+        ) {
+
+            element.innerHTML =
+                translations[language][key];
+
+        }
+
+    });
+
+
+    document.documentElement.lang =
+        language;
+
+
+    localStorage.setItem(
+        "rspTradingEscrowLanguage",
+        language
+    );
+
+}
+
+
+/* =========================================================
+   LANGUAGE SELECTOR
+========================================================= */
+
+const languageSelect =
+    document.getElementById(
+        "languageSelect"
+    );
+
+
+languageSelect.addEventListener(
+    "change",
+    function() {
+
+        changeLanguage(
+            this.value
+        );
+
+    }
+);
+
+
+/* =========================================================
+   FEE CALCULATOR
+========================================================= */
+
+const amountInput =
+    document.getElementById(
+        "amountInput"
+    );
+
+
+const buyerFeeElement =
+    document.getElementById(
+        "buyerFee"
+    );
+
+
+const sellerFeeElement =
+    document.getElementById(
+        "sellerFee"
+    );
+
+
+const totalFeeElement =
+    document.getElementById(
+        "totalFee"
+    );
+
+
+function calculateFee() {
+
+    const amount =
+        parseFloat(
+            amountInput.value
+        );
+
+
+    /*
+       NEW FEE STRUCTURE
+
+       $1 – $100
+       Buyer = $0.50
+       Seller = $0.50
+
+       $100.01 – $500
+       Buyer = $2
+       Seller = $2
+
+       $500.01 – $1,000
+       Buyer = $5
+       Seller = $5
+
+       $1,000+
+       Buyer = 0.5%
+       Seller = 0.5%
+    */
+
+
+    if (
+        isNaN(amount) ||
+        amount <= 0
+    ) {
+
+        buyerFeeElement.textContent =
+            "$0.50";
+
+        sellerFeeElement.textContent =
+            "$0.50";
+
+        totalFeeElement.textContent =
+            "$1.00";
+
+        return;
+
+    }
+
+
+    let buyerFee = 0;
+
+
+    if (amount <= 100) {
+
+        buyerFee = 0.50;
+
+    }
+
+    else if (amount <= 500) {
+
+        buyerFee = 2;
+
+    }
+
+    else if (amount <= 1000) {
+
+        buyerFee = 5;
+
+    }
+
+    else {
+
+        buyerFee =
+            amount * 0.005;
+
+    }
+
+
+    const sellerFee =
+        buyerFee;
+
+
+    const totalFee =
+        buyerFee + sellerFee;
+
+
+    buyerFeeElement.textContent =
+        "$" + buyerFee.toFixed(2);
+
+
+    sellerFeeElement.textContent =
+        "$" + sellerFee.toFixed(2);
+
+
+    totalFeeElement.textContent =
+        "$" + totalFee.toFixed(2);
+
+}
+
+
+amountInput.addEventListener(
+    "input",
+    calculateFee
+);
+
+
+/* =========================================================
+   LOAD SAVED LANGUAGE
+========================================================= */
+
+const savedLanguage =
+    localStorage.getItem(
+        "rspTradingEscrowLanguage"
+    ) || "en";
+
+
+languageSelect.value =
+    savedLanguage;
+
+
+changeLanguage(
+    savedLanguage
+);
+
+
+/* Initial calculator */
+
+calculateFee();
+
+
+</script>
+
+
+</body>
+
+</html>

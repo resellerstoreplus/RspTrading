@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Contact RspTrading Community">
+
+    <title>Contact Us — RspTrading Community</title>
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        :root {
+            --bg: #08080d;
+            --card: #111118;
+            --card2: #15151e;
+            --border: rgba(255,255,255,.08);
+            --text: #f5f5f7;
+            --muted: #9b9ba7;
+            --purple: #8b5cf6;
+            --purple2: #a78bfa;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background:
+                radial-gradient(
+                    circle at 20% 10%,
+                    rgba(139,92,246,.12),
+                    transparent 30%
+                ),
+                var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        .container {
+            width: min(1100px, 92%);
+            margin: auto;
+        }
+
+
+        /* ================= HEADER ================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(8,8,13,.82);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--border);
+        }
+
+
+        .navbar {
+            min-height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+
+        .logo-mark {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+
+        .logo-mark img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+
+        .logo > span:last-child > span {
+            color: var(--purple2);
+        }
+
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+
+        .language-select {
+            background: var(--card);
+            color: var(--text);
+            border: 1px solid var(--border);
+            padding: 10px 12px;
+            border-radius: 10px;
+            outline: none;
+            cursor: pointer;
+        }
+
+
+        .back-btn {
+            padding: 10px 16px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            color: var(--muted);
+            transition: .25s;
+        }
+
+
+        .back-btn:hover {
+            color: white;
+            border-color: var(--purple);
+        }
+
+
+        /* ================= HERO ================= */
+
+        .hero {
+            padding: 95px 0 55px;
+            text-align: center;
+        }
+
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            color: var(--purple2);
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 15px;
+        }
+
+
+        .eyebrow span:first-child {
+            width: 7px;
+            height: 7px;
+            background: var(--purple);
+            border-radius: 50%;
+            box-shadow: 0 0 15px var(--purple);
+        }
+
+
+        h1 {
+            font-size: clamp(38px, 6vw, 64px);
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+
+        .hero p {
+            max-width: 750px;
+            margin: auto;
+            color: var(--muted);
+            font-size: 17px;
+        }
+
+
+        /* ================= ABOUT ================= */
+
+        .section {
+            padding: 35px 0 70px;
+        }
+
+
+        .about-card {
+            background: linear-gradient(
+                145deg,
+                rgba(139,92,246,.10),
+                rgba(255,255,255,.025)
+            );
+            border: 1px solid var(--border);
+            border-radius: 22px;
+            padding: 35px;
+        }
+
+
+        .about-card h2 {
+            font-size: 28px;
+            margin-bottom: 16px;
+        }
+
+
+        .about-card p {
+            color: var(--muted);
+            margin-bottom: 12px;
+        }
+
+
+        .highlight {
+            color: var(--purple2);
+            font-weight: 700;
+        }
+
+
+        /* ================= LINKS ================= */
+
+        .links-section {
+            padding: 10px 0 70px;
+        }
+
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+
+        .section-title h2 {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+
+        .section-title p {
+            color: var(--muted);
+        }
+
+
+        .links-box {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 12px;
+        }
+
+
+        .link-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            padding: 17px 18px;
+            border-bottom: 1px solid var(--border);
+            transition: .25s;
+        }
+
+
+        .link-item:last-child {
+            border-bottom: none;
+        }
+
+
+        .link-item:hover {
+            background: rgba(139,92,246,.06);
+        }
+
+
+        .link-info {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            min-width: 0;
+        }
+
+
+        .link-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--card2);
+            border: 1px solid var(--border);
+            flex-shrink: 0;
+            font-weight: bold;
+        }
+
+
+        .link-text {
+            overflow: hidden;
+        }
+
+
+        .link-text strong {
+            display: block;
+            font-size: 14px;
+        }
+
+
+        .link-text span {
+            color: var(--muted);
+            font-size: 12px;
+            display: block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+
+        .open-link {
+            color: var(--purple2);
+            font-size: 13px;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+
+        /* ================= SOCIAL ================= */
+
+        .social-area {
+            text-align: center;
+            padding: 0 0 70px;
+        }
+
+
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 25px;
+        }
+
+
+        .social {
+            width: 43px;
+            height: 43px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--card);
+            border: 1px solid var(--border);
+            color: var(--muted);
+            font-weight: 800;
+            transition: .25s;
+        }
+
+
+        .social:hover {
+            transform: translateY(-3px);
+            color: white;
+            border-color: var(--purple);
+            background: rgba(139,92,246,.14);
+        }
+
+
+        /* ================= CONTACT CARDS ================= */
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+
+        .contact-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 28px;
+            transition: .25s;
+        }
+
+
+        .contact-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(139,92,246,.45);
+        }
+
+
+        .contact-icon {
+            font-size: 25px;
+            margin-bottom: 12px;
+        }
+
+
+        .contact-card h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+
+        .contact-card p {
+            color: var(--muted);
+            margin-bottom: 18px;
+        }
+
+
+        .contact-button {
+            display: inline-block;
+            background: var(--purple);
+            padding: 10px 17px;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: 700;
+            transition: .25s;
+        }
+
+
+        .contact-button:hover {
+            background: var(--purple2);
+            color: #111;
+        }
+
+
+        .email {
+            color: var(--purple2);
+            word-break: break-word;
+        }
+
+
+        /* ================= MEETING ================= */
+
+        .meeting {
+            margin-top: 18px;
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(139,92,246,.14),
+                    rgba(255,255,255,.025)
+                );
+            border: 1px solid var(--border);
+            border-radius: 22px;
+            padding: 32px;
+            text-align: center;
+        }
+
+
+        .meeting h2 {
+            margin-bottom: 12px;
+        }
+
+
+        .meeting p {
+            color: var(--muted);
+            max-width: 750px;
+            margin: auto;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 30px 0;
+            margin-top: 40px;
+        }
+
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 700px) {
+
+            .navbar {
+                min-height: 68px;
+            }
+
+
+            .back-btn {
+                display: none;
+            }
+
+
+            .hero {
+                padding-top: 65px;
+            }
+
+
+            .about-card {
+                padding: 25px;
+            }
+
+
+            .link-item {
+                padding: 14px 12px;
+            }
+
+
+            .open-link {
+                display: none;
+            }
+
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <nav class="navbar container">
+
+        <a href="../index.html" class="logo">
+
+            <span class="logo-mark">
+
+                <!-- আপনার Logo এখানে দিন -->
+
+                <img src="../assets/logo.jpg"
+                     alt="RspTrading Logo">
+
+            </span>
+
+            <span>
+                Rsp<span>Trading</span>
+            </span>
+
+        </a>
+
+
+        <div class="nav-right">
+
+            <select class="language-select"
+                    id="languageSelect">
+
+                <option value="en">
+                    🇬🇧 English
+                </option>
+
+                <option value="bn">
+                    🇧🇩 বাংলা
+                </option>
+
+            </select>
+
+
+            <a href="../index.html"
+               class="back-btn"
+               data-i18n="back">
+
+                ← Home
+
+            </a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="eyebrow">
+
+            <span></span>
+
+            <span data-i18n="eyebrow">
+                RspTrading Community
+            </span>
+
+        </div>
+
+
+        <h1 data-i18n="title">
+            Contact Us
+        </h1>
+
+
+        <p data-i18n="heroText">
+
+            Have a question, want to make a deal, or need
+            assistance with an Escrow transaction?
+            Contact the RspTrading team through the available channels.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="about-card">
+
+            <h2 data-i18n="aboutTitle">
+                About RspTrading
+            </h2>
+
+
+            <p data-i18n="about1">
+
+                RspTrading Community is a community marketplace
+                focused on buying, selling and trading digital
+                accounts and online assets.
+
+            </p>
+
+
+            <p data-i18n="about2">
+
+                RspTrading is primarily a branch of
+                <span class="highlight">
+                    Reseller Store Plus
+                </span>
+                and was created to build a more organized,
+                transparent and community-driven environment
+                for digital trading.
+
+            </p>
+
+
+            <p data-i18n="about3">
+
+                Our goal is to connect buyers and sellers,
+                provide clear trading guidelines and offer
+                an Escrow service for supported transactions.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= IMPORTANT LINKS ================= -->
+
+<section class="links-section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2 data-i18n="linksTitle">
+                Important Links
+            </h2>
+
+            <p data-i18n="linksText">
+                Our official contact and community links.
+            </p>
+
+        </div>
+
+
+        <div class="links-box">
+
+
+            <a href="https://t.me/RspTradingHQ"
+               target="_blank"
+               class="link-item">
+
+                <div class="link-info">
+
+                    <div class="link-icon">
+                        ✈
+                    </div>
+
+                    <div class="link-text">
+
+                        <strong data-i18n="link1Title">
+                            Telegram Channel
+                        </strong>
+
+                        <span>
+                            https://t.me/RspTradingHQ
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <span class="open-link"
+                      data-i18n="open">
+                    Open →
+                </span>
+
+            </a>
+
+
+
+            <a href="https://t.me/+AvQmbJSfyk1iMWNl"
+               target="_blank"
+               class="link-item">
+
+                <div class="link-info">
+
+                    <div class="link-icon">
+                        👥
+                    </div>
+
+                    <div class="link-text">
+
+                        <strong data-i18n="link2Title">
+                            Telegram Group
+                        </strong>
+
+                        <span>
+                            https://t.me/+AvQmbJSfyk1iMWNl
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <span class="open-link"
+                      data-i18n="open">
+                    Open →
+                </span>
+
+            </a>
+
+
+
+            <a href="http://t.me/RspTradingHQ?direct"
+               target="_blank"
+               class="link-item">
+
+                <div class="link-info">
+
+                    <div class="link-icon">
+                        💬
+                    </div>
+
+                    <div class="link-text">
+
+                        <strong data-i18n="link3Title">
+                            Direct Message
+                        </strong>
+
+                        <span>
+                            http://t.me/RspTradingHQ?direct
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <span class="open-link"
+                      data-i18n="open">
+                    Open →
+                </span>
+
+            </a>
+
+
+
+            <a href="https://facebook.com/RspTradingHQ"
+               target="_blank"
+               class="link-item">
+
+                <div class="link-info">
+
+                    <div class="link-icon">
+                        f
+                    </div>
+
+                    <div class="link-text">
+
+                        <strong>
+                            Facebook
+                        </strong>
+
+                        <span>
+                            https://facebook.com/RspTradingHQ
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <span class="open-link"
+                      data-i18n="open">
+                    Open →
+                </span>
+
+            </a>
+
+
+
+            <a href="https://t.me/RspHelp"
+               target="_blank"
+               class="link-item">
+
+                <div class="link-info">
+
+                    <div class="link-icon">
+                        ✈
+                    </div>
+
+                    <div class="link-text">
+
+                        <strong data-i18n="link5Title">
+                            RspHelp
+                        </strong>
+
+                        <span>
+                            https://t.me/RspHelp
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <span class="open-link"
+                      data-i18n="open">
+                    Open →
+                </span>
+
+            </a>
+
+
+
+            <a href="https://twitter.com/RspHelp"
+               target="_blank"
+               class="link-item">
+
+                <div class="link-info">
+
+                    <div class="link-icon">
+                        𝕏
+                    </div>
+
+                    <div class="link-text">
+
+                        <strong>
+                            X / Twitter
+                        </strong>
+
+                        <span>
+                            https://twitter.com/RspHelp
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <span class="open-link"
+                      data-i18n="open">
+                    Open →
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= SOCIAL MEDIA ================= -->
+
+<section class="social-area">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2 data-i18n="socialTitle">
+                Follow Us
+            </h2>
+
+            <p data-i18n="socialText">
+                Stay connected with RspTrading.
+            </p>
+
+        </div>
+
+
+        <div class="social-buttons">
+
+
+            <a href="https://facebook.com/RspTradingHQ"
+               target="_blank"
+               class="social"
+               aria-label="Facebook">
+                f
+            </a>
+
+
+            <a href="https://twitter.com/RspHelp"
+               target="_blank"
+               class="social"
+               aria-label="X">
+                𝕏
+            </a>
+
+
+            <a href="https://t.me/RspTradingHQ"
+               target="_blank"
+               class="social"
+               aria-label="Telegram">
+                ✈
+            </a>
+
+
+            <a href="https://t.me/+AvQmbJSfyk1iMWNl"
+               target="_blank"
+               class="social"
+               aria-label="Telegram Group">
+                👥
+            </a>
+
+
+            <a href="https://t.me/RspHelp"
+               target="_blank"
+               class="social"
+               aria-label="RspHelp">
+                R
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CONTACT OPTIONS ================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="contact-grid">
+
+
+            <!-- GROUP -->
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    👥
+                </div>
+
+                <h3 data-i18n="groupTitle">
+                    Buy • Sell • Trade
+                </h3>
+
+                <p data-i18n="groupText">
+
+                    To buy, sell or trade accounts and digital
+                    products, please stay connected with our
+                    official community group.
+
+                </p>
+
+                <a href="https://t.me/+AvQmbJSfyk1iMWNl"
+                   target="_blank"
+                   class="contact-button"
+                   data-i18n="joinGroup">
+
+                    Join Group →
+
+                </a>
+
+            </div>
+
+
+
+            <!-- ESCROW -->
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    🛡️
+                </div>
+
+                <h3 data-i18n="escrowTitle">
+                    RspTrading Escrow
+                </h3>
+
+                <p data-i18n="escrowText">
+
+                    For an Escrow deal, contact us directly
+                    through our official Telegram account.
+
+                </p>
+
+                <a href="http://t.me/RspTradingHQ?direct"
+                   target="_blank"
+                   class="contact-button"
+                   data-i18n="messageUs">
+
+                    Message Us →
+
+                </a>
+
+            </div>
+
+
+
+            <!-- EMAIL -->
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    ✉️
+                </div>
+
+                <h3 data-i18n="emailTitle">
+                    Email
+                </h3>
+
+                <p>
+
+                    <span data-i18n="emailText">
+                        You can also contact us by email:
+                    </span>
+
+                    <br>
+
+                    <a href="mailto:resellerstoreplus@gmail.com"
+                       class="email">
+
+                        resellerstoreplus@gmail.com
+
+                    </a>
+
+                </p>
+
+                <a href="mailto:resellerstoreplus@gmail.com"
+                   class="contact-button"
+                   data-i18n="sendEmail">
+
+                    Send Email →
+
+                </a>
+
+            </div>
+
+
+
+            <!-- MEETING -->
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    🤝
+                </div>
+
+                <h3 data-i18n="meetingTitle">
+                    Meet Us Directly
+                </h3>
+
+                <p data-i18n="meetingText">
+
+                    If you prefer, you may also meet us directly
+                    and discuss a deal in person. Please contact
+                    us first to discuss the price and arrange the deal.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- FINAL MESSAGE -->
+
+        <div class="meeting">
+
+            <h2 data-i18n="finalTitle">
+                Need to make a deal?
+            </h2>
+
+            <p data-i18n="finalText">
+
+                Whether you want to buy, sell, trade or use
+                our Escrow service, contact RspTrading through
+                one of our official channels.
+
+                Stay connected. Trade responsibly. Stay safe.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-bottom">
+
+            <span>
+                © <span id="year"></span>
+                RspTrading Community
+            </span>
+
+            <span data-i18n="footer">
+                Buy • Sell • Trade • Trust
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<script>
+
+    /* ================= YEAR ================= */
+
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+
+
+    /* ================= LANGUAGE ================= */
+
+    const translations = {
+
+        en: {
+
+            back: "← Home",
+
+            eyebrow: "RspTrading Community",
+
+            title: "Contact Us",
+
+            heroText:
+                "Have a question, want to make a deal, or need assistance with an Escrow transaction? Contact the RspTrading team through the available channels.",
+
+
+            aboutTitle:
+                "About RspTrading",
+
+            about1:
+                "RspTrading Community is a community marketplace focused on buying, selling and trading digital accounts and online assets.",
+
+            about2:
+                "RspTrading is primarily a branch of Reseller Store Plus and was created to build a more organized, transparent and community-driven environment for digital trading.",
+
+            about3:
+                "Our goal is to connect buyers and sellers, provide clear trading guidelines and offer an Escrow service for supported transactions.",
+
+
+            linksTitle:
+                "Important Links",
+
+            linksText:
+                "Our official contact and community links.",
+
+            link1Title:
+                "Telegram Channel",
+
+            link2Title:
+                "Telegram Group",
+
+            link3Title:
+                "Direct Message",
+
+            link5Title:
+                "RspHelp",
+
+            open:
+                "Open →",
+
+
+            socialTitle:
+                "Follow Us",
+
+            socialText:
+                "Stay connected with RspTrading.",
+
+
+            groupTitle:
+                "Buy • Sell • Trade",
+
+            groupText:
+                "To buy, sell or trade accounts and digital products, please stay connected with our official community group.",
+
+            joinGroup:
+                "Join Group →",
+
+
+            escrowTitle:
+                "RspTrading Escrow",
+
+            escrowText:
+                "For an Escrow deal, contact us directly through our official Telegram account.",
+
+            messageUs:
+                "Message Us →",
+
+
+            emailTitle:
+                "Email",
+
+            emailText:
+                "You can also contact us by email:",
+
+            sendEmail:
+                "Send Email →",
+
+
+            meetingTitle:
+                "Meet Us Directly",
+
+            meetingText:
+                "If you prefer, you may also meet us directly and discuss a deal in person. Please contact us first to discuss the price and arrange the deal.",
+
+
+            finalTitle:
+                "Need to make a deal?",
+
+            finalText:
+                "Whether you want to buy, sell, trade or use our Escrow service, contact RspTrading through one of our official channels. Stay connected. Trade responsibly. Stay safe.",
+
+
+            footer:
+                "Buy • Sell • Trade • Trust"
+
+        },
+
+
+        bn: {
+
+            back: "← হোম",
+
+            eyebrow: "RspTrading Community",
+
+            title: "যোগাযোগ করুন",
+
+            heroText:
+                "আপনার কোনো প্রশ্ন থাকলে, কোনো ডিল করতে চাইলে অথবা Escrow Transaction সম্পর্কে সহায়তা প্রয়োজন হলে আমাদের Official Channel-এর মাধ্যমে RspTrading Team-এর সাথে যোগাযোগ করুন।",
+
+
+            aboutTitle:
+                "RspTrading সম্পর্কে",
+
+            about1:
+                "RspTrading Community হলো Digital Account ও Online Asset কেনা, বিক্রি এবং Trade করার জন্য একটি Community Marketplace।",
+
+            about2:
+                "RspTrading মূলত Reseller Store Plus-এর একটি শাখা। Digital Trading-এর জন্য একটি আরও Organized, Transparent এবং Community-driven পরিবেশ তৈরি করার উদ্দেশ্যে এটি প্রতিষ্ঠিত হয়েছে।",
+
+            about3:
+                "আমাদের লক্ষ্য হলো Buyer ও Seller-দের মধ্যে যোগাযোগ তৈরি করা, পরিষ্কার Trading Rules প্রদান করা এবং Supported Transaction-এর জন্য Escrow Service প্রদান করা।",
+
+
+            linksTitle:
+                "প্রয়োজনীয় লিংক",
+
+            linksText:
+                "আমাদের Official Contact ও Community Link সমূহ।",
+
+            link1Title:
+                "Telegram Channel",
+
+            link2Title:
+                "Telegram Group",
+
+            link3Title:
+                "Direct Message",
+
+            link5Title:
+                "RspHelp",
+
+            open:
+                "Open →",
+
+
+            socialTitle:
+                "Social Media",
+
+            socialText:
+                "RspTrading-এর সাথে যুক্ত থাকুন।",
+
+
+            groupTitle:
+                "কেনা • বেচা • ট্রেডিং",
+
+            groupText:
+                "Account ও Digital Product কেনা, বিক্রি অথবা Trade করার জন্য আমাদের Official Community Group-এর সাথে যুক্ত থাকুন।",
+
+            joinGroup:
+                "Group-এ যুক্ত হন →",
+
+
+            escrowTitle:
+                "RspTrading Escrow",
+
+            escrowText:
+                "Escrow-এর মাধ্যমে কোনো Deal করতে চাইলে আমাদের Official Telegram Account-এ সরাসরি Message করুন।",
+
+            messageUs:
+                "Message করুন →",
+
+
+            emailTitle:
+                "ইমেইল",
+
+            emailText:
+                "আপনি চাইলে Email-এর মাধ্যমেও আমাদের সাথে যোগাযোগ করতে পারেন:",
+
+            sendEmail:
+                "Email পাঠান →",
+
+
+            meetingTitle:
+                "সরাসরি দেখা করে Deal",
+
+            meetingText:
+                "আপনি চাইলে সরাসরি আমাদের সাথে দেখা করেও Deal করতে পারবেন। সেক্ষেত্রে আগে আমাদের সাথে যোগাযোগ করে Price নির্ধারণ এবং Deal-এর বিষয়টি নিশ্চিত করার জন্য বলা হলো।",
+
+
+            finalTitle:
+                "Deal করতে চান?",
+
+            finalText:
+                "আপনি Account কিনতে, বিক্রি করতে, Trade করতে অথবা আমাদের Escrow Service ব্যবহার করতে চাইলে আমাদের Official Channel-এর যেকোনো একটি মাধ্যমে RspTrading-এর সাথে যোগাযোগ করুন। যুক্ত থাকুন। দায়িত্বশীলভাবে Trade করুন। নিরাপদ থাকুন।",
+
+
+            footer:
+                "Buy • Sell • Trade • Trust"
+
+        }
+
+    };
+
+
+
+    function setLanguage(lang) {
+
+        document.documentElement.lang = lang;
+
+
+        document.querySelectorAll("[data-i18n]")
+            .forEach(element => {
+
+                const key = element.getAttribute("data-i18n");
+
+                if (translations[lang][key]) {
+
+                    element.textContent =
+                        translations[lang][key];
+
+                }
+
+            });
+
+
+        localStorage.setItem(
+            "rspTradingLanguage",
+            lang
+        );
+
+    }
+
+
+
+    const languageSelect =
+        document.getElementById("languageSelect");
+
+
+    languageSelect.addEventListener(
+        "change",
+        function () {
+
+            setLanguage(this.value);
+
+        }
+    );
+
+
+    const savedLanguage =
+        localStorage.getItem(
+            "rspTradingLanguage"
+        ) || "en";
+
+
+    languageSelect.value = savedLanguage;
+
+    setLanguage(savedLanguage);
+
+</script>
+
+
+</body>
+
+</html>
